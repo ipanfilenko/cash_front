@@ -1,0 +1,9 @@
+@import '../fonts/fonts.scss';
+@import "./variables";
+
+body {
+  font-family: $font;
+  font-weight: 400;
+  font-size: 16px;
+  background: var($mainBackground);
+}

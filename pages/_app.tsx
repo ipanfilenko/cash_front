@@ -1,6 +1,26 @@
-import '../styles/globals.css'
-import type { AppProps } from 'next/app'
+import type { AppProps } from "next/app";
+import "normalize.css";
+import "../styles/main.scss";
+import { QueryClient, QueryClientProvider } from "react-query";
+import { ThemeContext } from "../context/theme";
+import Wrapper from "../components/Wrapper";
+
+const queryClient = new QueryClient();
 
 export default function App({ Component, pageProps }: AppProps) {
-  return <Component {...pageProps} />
+  const config = {
+    isIncognito: false,
+  };
+  const themeName = config.isIncognito ? "dark" : "light";
+  return (
+    <>
+      <QueryClientProvider client={queryClient}>
+        <ThemeContext.Provider value={themeName}>
+          <Wrapper>
+            <Component {...pageProps} />
+          </Wrapper>
+        </ThemeContext.Provider>
+      </QueryClientProvider>
+    </>
+  );
 }

@@ -1,0 +1,47 @@
+@import "styles/variables";
+
+.shortcuts {
+}
+
+.list {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 -10px;
+  padding: 0;
+  justify-content: center;
+}
+
+.item {
+  padding: 0 10px 15px;
+}
+
+.button {
+  background: none;
+  border: 0;
+  padding: 0;
+  cursor: pointer;
+}
+
+.image {
+  width: 60px;
+  height: 60px;
+  margin-bottom: 5px;
+  background: #f3f3f3;
+  border-radius: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.imageFull {
+  background: none;
+  border-radius: 0;
+}
+
+.title {
+  display: block;
+  font-size: 13px;
+  color: $shortcutText;
+  line-height: 22px;
+}
