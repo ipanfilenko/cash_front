@@ -13,12 +13,7 @@ function Icon({ name, className }: IconProps) {
   if (icon == null) return null;
 
   return (
-    <svg
-      className={classNames(className)}
-      viewBox={icon.viewBox}
-      width={icon.width}
-      height={icon.height}
-    >
+    <svg className={classNames(className)} viewBox={icon.viewBox}>
       {icon.path}
     </svg>
   );

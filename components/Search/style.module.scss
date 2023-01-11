@@ -7,7 +7,7 @@
 
 .button {
   padding: 10px 19px;
-  background: var($searchBackground);
+  background: $searchBackground;
   border: 0;
   display: flex;
   align-items: center;
@@ -19,10 +19,11 @@
 .svg {
   width: 18px;
   height: 18px;
+  fill: $textColor;
 }
 
 .text {
-  color: var($textColor);
+  color: $textColor;
   opacity: 0.5;
   margin-left: 14px;
   font-size: 18px;

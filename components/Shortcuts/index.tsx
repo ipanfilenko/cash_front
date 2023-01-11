@@ -1,12 +1,17 @@
 import React from "react";
+import Image from "next/image";
 import classNames from "classnames";
 import ShortcutModel, { Shortcut } from "./shortcuts.model";
 import styles from "./style.module.scss";
 
+import androidService from "../../services/androidService";
+
 function Shortcuts() {
   const shortcuts = ShortcutModel.favorite;
 
-  const handleClick = (shortcut: Shortcut) => {};
+  const handleClick = (shortcut: Shortcut) => {
+    androidService.loadUrl(shortcut.url ?? "new");
+  };
 
   return (
     <div className={classNames(styles.shortcuts)}>
@@ -25,7 +30,7 @@ function Shortcuts() {
                     isFull && styles.imageFull
                   )}
                 >
-                  <img src={iconPath} />
+                  <Image src={iconPath} alt="" width={60} height={60} />
                 </div>
                 <span className={classNames(styles.title)}>{title}</span>
               </button>

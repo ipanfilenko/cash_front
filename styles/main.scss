@@ -1,9 +1,10 @@
-@import '../fonts/fonts.scss';
+@import "../fonts/fonts.scss";
 @import "./variables";
+@import "./dropdown.scss";
 
 body {
   font-family: $font;
   font-weight: 400;
   font-size: 16px;
-  background: var($mainBackground);
+  background: $mainBackground;
 }

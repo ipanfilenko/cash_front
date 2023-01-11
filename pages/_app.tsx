@@ -1,5 +1,6 @@
 import type { AppProps } from "next/app";
 import "normalize.css";
+import 'rc-dropdown/assets/index.css';
 import "../styles/main.scss";
 import { QueryClient, QueryClientProvider } from "react-query";
 import { ThemeContext } from "../context/theme";

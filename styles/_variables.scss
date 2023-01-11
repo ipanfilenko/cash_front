@@ -2,7 +2,8 @@
 $font: "Google Sans";
 
 // Theme variables
-$mainBackground: --mainBackground;
-$searchBackground: --searchBackground;
-$textColor: --textColor;
-$shortcutText: --shortcutText;
+$mainBackground: var(--mainBackground);
+$searchBackground: var(--searchBackground);
+$textColor: var(--textColor);
+$shortcutText: var(--shortcutText);
+$divider: var(--divider);

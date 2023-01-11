@@ -1,27 +1,44 @@
 import { useQuery } from "react-query";
-// import axios from "axios";
+import NewsDto from "./news.type";
 
-// "https://cors-anywhere.herokuapp.com/https://www.treasury.gov/resource-center/data-chart-center/interest-rates/Datasets/yield.xml"
+export enum ActionsEnum {
+  OPEN_IN_NEW_TAB = "open-in-new-tab",
+  COPY_LINK_ADDRESS = "copy-link",
+  COPY_LINK_TEXT = "copy-text",
+}
 
 function useNewsState() {
-  const { data } = useQuery("repoData", async () => {
-    const result = await fetch("/api/feeds/rss/world.xml", {
-      // mode: "no-cors",
-    }).then(async (response) => await response.text());
-    // .then((str) => new window.DOMParser().parseFromString(str, "text/xml"))
-    // .then((data) => console.log(data));
-    return result;
-    // const result = await axios.get("https://feeds.skynews.com/feeds/rss/world.xml", {
-    //   headers: {
-    //     // "Host": 'feeds.skynews.com'
-    //     'Access-Control-Allow-Origin' : '*',
-    //   },      
-    // });
-    // return result;
-  });
-  console.log("data", data);
+  const { data, isLoading } = useQuery<NewsDto[]>("repoData", async () => {
+    const result = await fetch("/api/news").then(
+      async (response) => await response.json()
+    );
 
-  return {};
+    return result;
+  });
+
+  const dropdownOptions = [
+    {
+      label: "Open in new tab",
+      value: ActionsEnum.OPEN_IN_NEW_TAB,
+    },
+    {
+      label: "Copy link address",
+      value: ActionsEnum.COPY_LINK_ADDRESS,
+    },
+    {
+      label: "Copy link text",
+      value: ActionsEnum.COPY_LINK_TEXT,
+    },
+  ];
+
+  const handleSelectAction = (news: NewsDto, action: ActionsEnum) => {};
+
+  return {
+    newsList: data,
+    isLoading,
+    dropdownOptions,
+    handleSelectAction,
+  };
 }
 
 export default useNewsState;

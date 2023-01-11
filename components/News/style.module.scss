@@ -1,0 +1,86 @@
+@import "styles/variables";
+
+.news {
+}
+
+.list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.item {
+  border-bottom: 1px solid var($divider);
+  padding: 15px 0;
+  &:last-child {
+    border-bottom: 0;
+    padding-bottom: 0;
+  }
+}
+
+.top {
+  display: flex;
+  align-items: center;
+  padding-bottom: 12px;
+  justify-content: space-between;
+}
+
+.title {
+  line-height: 22px;
+  font-size: 16px;
+  color: $textColor;
+  padding-right: 15px;
+  width: calc(100% - 85px);
+}
+
+.image {
+  display: block;
+  width: 85px;
+  height: 70px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.siteTitle {
+  font-size: 12px;
+  color: $textColor;
+  opacity: 0.5;
+  display: inline-block;
+  vertical-align: middle;
+  padding-left: 8px;
+}
+
+.actions {
+  display: flex;
+  align-items: center;
+}
+
+.actionButton {
+  padding: 0;
+  border: 0;
+  background: none;
+  cursor: pointer;
+  display: block;
+  margin-left: 25px;
+  svg {
+    width: 24px;
+    height: 24px;
+    fill: #5f6368;
+    display: block;
+  }
+}
+
+.dropdown {
+  margin-left: 24px;
+}

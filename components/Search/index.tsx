@@ -1,11 +1,13 @@
 import React from "react";
 import classNames from "classnames";
-import Icon from "../icons";
+import Icon from "../shared/icons";
 import styles from "./style.module.scss";
+
+import androidService from "../../services/androidService";
 
 function Search() {
   const handleSearch = () => {
-    console.log("search");
+    androidService.search();
   };
   return (
     <div className={classNames(styles.search)}>
