@@ -10,6 +10,9 @@
     border: 0;
     padding: 5px;
     border-radius: 10px;
+    font-family: $font;
+    font-weight: 400;
+    font-size: 14px;
     & > li {
       padding-bottom: 15px;
       &:last-child {

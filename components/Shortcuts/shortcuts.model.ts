@@ -78,7 +78,7 @@ class ShortcutModel {
     {
       id: ShortcutEnum.INSTAGRAM,
       title: "Instagram",
-      iconPath: `${pathPrefix}/facebook.svg`,
+      iconPath: `${pathPrefix}/insta.svg`,
       url: "https://www.instagram.com/",
       isFull: true,
     },

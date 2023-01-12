@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 import React from "react";
 import Image from "next/image";
 import classNames from "classnames";
@@ -30,7 +31,7 @@ function Shortcuts() {
                     isFull && styles.imageFull
                   )}
                 >
-                  <Image src={iconPath} alt="" width={60} height={60} />
+                  <img src={iconPath} alt="" />
                 </div>
                 <span className={classNames(styles.title)}>{title}</span>
               </button>
