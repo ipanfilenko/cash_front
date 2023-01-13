@@ -31,12 +31,13 @@
   color: $textColor;
   padding-right: 15px;
   width: calc(100% - 85px);
+  box-sizing: border-box;
 }
 
 .image {
   display: block;
-  width: 85px;
-  height: 70px;
+  width: 70px;
+  height: 60px;
   object-fit: cover;
   border-radius: 10px;
 }

@@ -53,8 +53,10 @@ const sortNews = (news: NewsDto[]): NewsDto[] => {
   const result = news.sort((a, b) => {
     const timeA = +dayjs(a.lastUpdated);
     const timeB = +dayjs(b.lastUpdated);
+
     return timeB - timeA;
   });
+
   return result;
 };
 
@@ -70,13 +72,17 @@ const formattNews = async (source: AxiosResponse<string, any>[]) => {
     const json = await parseToJson(xml.data);
     const items = json.rss.channel?.item;
     const news = resolveNews(json.rss.channel, items);
-    const sortedNews = sortNews(news);
-    const result = filterByUniqueNews(sortedNews);
-    return result;
+
+    return news;
   });
 
-  const flatNews = await Promise.all(jsonNews);
-  return flatNews.flat();
+  const news = await Promise.all(jsonNews);
+  const flatNews = news.flat();
+
+  const filteredNews = filterByUniqueNews(flatNews);
+  const result = sortNews(filteredNews);
+
+  return result;
 };
 
 export default async function handler(
