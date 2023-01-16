@@ -5,6 +5,7 @@ import News from "../components/News";
 
 export default function Home() {
   const NEXT_PUBLIC_ADSENSE_KEY = process.env.NEXT_PUBLIC_ADSENSE_KEY;
+
   return (
     <>
       <Head>
