@@ -10,7 +10,7 @@ npm run dev
 yarn dev
 ```
 
-## Deploy to server
+## Deploy API to server
 
   
  1. connect by ssh to the server

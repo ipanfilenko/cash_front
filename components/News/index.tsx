@@ -34,9 +34,10 @@ function News() {
         format="auto"
         responsive="true"
         style={{ display: "block" }}
+        key="adsense-banner"
       />
 
-      <ul className={styles.list}>
+      <ul className={styles.list} key="list">
         {newsList.map((news, index) => {
           const {
             id,
@@ -50,9 +51,9 @@ function News() {
           const updatedTime = dayjs(lastUpdated).fromNow();
 
           return (
-            <>
+            <React.Fragment key={id + websiteTitle}>
               {index === 1 && (
-                <li key="adsense" className={styles.item}>
+                <li key="adsense-news" className={styles.item}>
                   <Adsense
                     style={{ display: "block", textAlign: "center" }}
                     layout="in-article"
@@ -115,7 +116,7 @@ function News() {
                   </div>
                 </div>
               </li>
-            </>
+            </React.Fragment>
           );
         })}
       </ul>
