@@ -1,0 +1,25 @@
+@import "styles/variables";
+
+.actions {
+  display: flex;
+  align-items: center;
+}
+
+.actionButton {
+  padding: 0;
+  border: 0;
+  background: none;
+  cursor: pointer;
+  display: block;
+  margin-left: 25px;
+  svg {
+    width: 24px;
+    height: 24px;
+    fill: #5f6368;
+    display: block;
+  }
+}
+
+.dropdown {
+  margin-left: 24px;
+}

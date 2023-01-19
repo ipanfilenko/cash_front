@@ -5,10 +5,9 @@ import styles from "./style.module.scss";
 import classNames from "classnames";
 import dayjs from "dayjs";
 import relativeTime from "dayjs/plugin/relativeTime";
-import Dropdown from "rc-dropdown";
-import Menu, { Item as MenuItem } from "rc-menu";
+
 import { Adsense } from "@ctrl/react-adsense";
-import Icon from "../shared/icons";
+import Action from "./components/Action";
 
 dayjs.extend(relativeTime);
 
@@ -20,6 +19,7 @@ function News() {
     newsList,
     dropdownOptions,
     handleSelectAction,
+    handleOpenNews,
   } = useNewsState();
 
   if (isLoading || !newsList) {
@@ -54,65 +54,53 @@ function News() {
             <React.Fragment key={id + websiteTitle}>
               {index === 1 && (
                 <li key="adsense-news" className={styles.item}>
-                  <Adsense
-                    style={{ display: "block", textAlign: "center" }}
-                    layout="in-article"
-                    format="fluid"
-                    client={`${NEXT_PUBLIC_ADSENSE_KEY}`}
-                    slot="2713050408"
-                  />
+                  <div className={styles.itemBox}>
+                    <Adsense
+                      style={{ display: "block", textAlign: "center" }}
+                      layout="in-article"
+                      format="fluid"
+                      client={`${NEXT_PUBLIC_ADSENSE_KEY}`}
+                      slot="2713050408"
+                    />
+                  </div>
                 </li>
               )}
               <li className={styles.item} key={id + websiteTitle}>
-                <div className={styles.top}>
-                  <span className={styles.title}>{websiteTitle}</span>
-                  {mediaThumbnail && (
-                    <Image
-                      className={classNames(styles.image)}
-                      src={mediaThumbnail.url}
-                      alt=""
-                      width={Number(mediaThumbnail.width)}
-                      height={Number(mediaThumbnail.height)}
-                    />
-                  )}
-                </div>
-                <div className={classNames(styles.bottom)}>
-                  <div>
-                    <Image
-                      className={classNames(styles.logo)}
-                      src={iconUrl}
-                      alt=""
-                      width={16}
-                      height={8}
-                    />
-                    <span className={classNames(styles.siteTitle)}>
-                      {title} - {updatedTime}
-                    </span>
+                <div className={styles.itemBox}>
+                  <div
+                    className={styles.top}
+                    onClick={() => handleOpenNews(news)}
+                    role="button"
+                  >
+                    <span className={styles.title}>{websiteTitle}</span>
+                    {mediaThumbnail && (
+                      <Image
+                        className={classNames(styles.image)}
+                        src={mediaThumbnail.url}
+                        alt=""
+                        width={Number(mediaThumbnail.width)}
+                        height={Number(mediaThumbnail.height)}
+                      />
+                    )}
                   </div>
-                  <div className={classNames(styles.actions)}>
-                    <button className={styles.actionButton}>
-                      <Icon name="share" />
-                    </button>
-                    <Dropdown
-                      trigger={["click"]}
-                      overlay={
-                        <Menu
-                          onSelect={(option) =>
-                            handleSelectAction(news, option.key as ActionsEnum)
-                          }
-                        >
-                          {dropdownOptions.map((option) => (
-                            <MenuItem key={option.value}>
-                              {option.label}
-                            </MenuItem>
-                          ))}
-                        </Menu>
-                      }
-                    >
-                      <button className={styles.actionButton}>
-                        <Icon name="more" />
-                      </button>
-                    </Dropdown>
+                  <div className={classNames(styles.bottom)}>
+                    <div>
+                      <Image
+                        className={classNames(styles.logo)}
+                        src={iconUrl}
+                        alt=""
+                        width={16}
+                        height={8}
+                      />
+                      <span className={classNames(styles.siteTitle)}>
+                        {title} - {updatedTime}
+                      </span>
+                    </div>
+                    <Action
+                      handleSelectAction={handleSelectAction}
+                      news={news}
+                      dropdownOptions={dropdownOptions}
+                    />
                   </div>
                 </div>
               </li>

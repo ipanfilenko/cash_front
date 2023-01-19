@@ -6,15 +6,32 @@
 .list {
   list-style: none;
   padding: 0;
-  margin: 0;
+  margin: 0 -8px;
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .item {
-  border-bottom: 1px solid $divider;
-  padding: 15px 0;
+  padding: 0 8px;
+  width: 50%;
   &:last-child {
-    border-bottom: 0;
     padding-bottom: 0;
+  }
+  @media (max-width: $portrait) {
+    width: 100%;
+    &:last-child {
+      .itemBox {
+        border-bottom: 0;
+      }
+    }
+  }
+}
+
+.itemBox {
+  padding: 15px;
+  border-bottom: 1px solid $divider;
+  @media (max-width: $portrait) {
+    padding: 15px 0;
   }
 }
 
@@ -60,28 +77,4 @@
   display: inline-block;
   vertical-align: middle;
   padding-left: 8px;
-}
-
-.actions {
-  display: flex;
-  align-items: center;
-}
-
-.actionButton {
-  padding: 0;
-  border: 0;
-  background: none;
-  cursor: pointer;
-  display: block;
-  margin-left: 25px;
-  svg {
-    width: 24px;
-    height: 24px;
-    fill: #5f6368;
-    display: block;
-  }
-}
-
-.dropdown {
-  margin-left: 24px;
 }

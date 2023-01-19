@@ -1,4 +1,5 @@
 import { useQuery } from "react-query";
+import { useRouter } from "next/router";
 import NewsDto from "./news.type";
 
 const nodeEnv = process.env.NODE_ENV;
@@ -14,7 +15,9 @@ export enum ActionsEnum {
   COPY_LINK_TEXT = "copy-text",
 }
 
+
 function useNewsState() {
+  const router = useRouter();
   const { data, isLoading } = useQuery<NewsDto[]>("repoData", async () => {
     const result = await fetch(`${apiHost}/api/news`).then(
       async (response) => await response.json()
@@ -40,11 +43,17 @@ function useNewsState() {
 
   const handleSelectAction = (news: NewsDto, action: ActionsEnum) => {};
 
+  const handleOpenNews = (news: NewsDto) => {
+    router.push(news.visualUrl ?? news.website);
+  };
+
+
   return {
     newsList: data,
     isLoading,
     dropdownOptions,
     handleSelectAction,
+    handleOpenNews,
   };
 }
 

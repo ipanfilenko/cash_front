@@ -1,6 +1,6 @@
 /* eslint-disable @next/next/no-img-element */
 import React from "react";
-import Image from "next/image";
+import { useRouter } from "next/router";
 import classNames from "classnames";
 import ShortcutModel, { Shortcut } from "./shortcuts.model";
 import styles from "./style.module.scss";
@@ -9,9 +9,13 @@ import androidService from "../../services/androidService";
 
 function Shortcuts() {
   const shortcuts = ShortcutModel.favorite;
+  const router = useRouter();
 
   const handleClick = (shortcut: Shortcut) => {
     androidService.loadUrl(shortcut.url ?? "new");
+    if (shortcut.url) {
+      router.push(shortcut.url ?? "");
+    }
   };
 
   return (
