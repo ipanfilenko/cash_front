@@ -24,10 +24,19 @@ export const ShareIcon = {
   ),
 };
 
+export const RightArrow = {
+  name: "right-arrow" as const,
+  viewBox: "0 0 12 12",
+  path: (
+    <path d="M0.666563 5.33355V6.66688H8.66656L4.9999 10.3335L5.94656 11.2802L11.2266 6.00021L5.94656 0.720215L4.9999 1.66688L8.66656 5.33355H0.666563Z" />
+  ),
+};
+
 export type IconNames =
   | typeof SearchIcon["name"]
   | typeof MoreIcon["name"]
-  | typeof ShareIcon["name"];
+  | typeof ShareIcon["name"]
+  | typeof RightArrow["name"];
 
 export interface IconModel {
   name: IconNames;
@@ -35,4 +44,4 @@ export interface IconModel {
   path: ReactNode;
 }
 
-export const allIcons = [SearchIcon, MoreIcon, ShareIcon];
+export const allIcons = [SearchIcon, MoreIcon, ShareIcon, RightArrow];

@@ -5,6 +5,7 @@ export const theme = {
     textColor: "#000",
     shortcutText: "#1B1918",
     divider: "#E6E6E6",
+    yellow: "#feea3b",
   },
   dark: {
     mainBackground: "#000",
@@ -12,6 +13,7 @@ export const theme = {
     textColor: "#fff",
     shortcutText: "#fff",
     divider: "#272727",
+    yellow: "#feea3b",
   },
 };
 

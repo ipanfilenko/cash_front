@@ -1,6 +1,7 @@
 @import "styles/variables";
 
 .news {
+  padding-bottom: 25px;
 }
 
 .list {
@@ -14,12 +15,6 @@
 .item {
   padding: 0 8px;
   width: 100%;
-  &:last-child {
-    padding-bottom: 0;
-    .itemBox {
-      border-bottom: 0;
-    }
-  }
 }
 
 .itemBox {

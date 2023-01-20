@@ -1,0 +1,96 @@
+@import "styles/variables";
+
+.article {
+  display: block;
+  margin: 0 -15px;
+  padding-bottom: 50px;
+
+  :global {
+    .slick-track {
+      display: flex;
+      margin: 0;
+    }
+    .slick-slider {
+    }
+    .slick-list {
+      padding: 0 0 20px !important;
+    }
+    .slick-slide {
+      height: auto;
+      & > div {
+        height: 100%;
+      }
+    }
+  }
+}
+
+.item {
+  width: 210px !important;
+  padding: 0 8px;
+  height: 100%;
+}
+
+.itemBox {
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.07);
+  border-radius: 20px;
+  height: 100%;
+  overflow: hidden;
+}
+
+.mainTitle {
+  font-size: 20px;
+  font-weight: 700;
+  display: block;
+  color: $shortcutText;
+  padding: 0 15px 20px;
+}
+
+.image {
+  display: block;
+  margin-bottom: 16px;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.bottom {
+  padding: 0 15px 47px;
+  position: relative;
+  display: block;
+}
+
+.title {
+  display: block;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 24px;
+  padding-bottom: 7px;
+  color: $shortcutText;
+}
+
+.link {
+  color: $shortcutText;
+  font-size: 14px;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  position: absolute;
+  bottom: 15px;
+  left: 0;
+  right: 0;
+  padding: 0 15px;
+}
+
+.linkText {
+  border-bottom: 1px solid $yellow;
+  padding-bottom: 2px;
+  display: table;
+}
+
+.arrow {
+  width: 12px;
+  height: 12px;
+  fill: $yellow;
+  margin-left: 8px;
+}
