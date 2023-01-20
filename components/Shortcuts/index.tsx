@@ -19,30 +19,32 @@ function Shortcuts() {
   };
 
   return (
-    <div className={classNames(styles.shortcuts)}>
-      <ul className={classNames(styles.list)}>
-        {shortcuts.map((shortcut) => {
-          const { iconPath, id, title, isFull } = shortcut;
-          return (
-            <li key={id} className={classNames(styles.item)}>
-              <button
-                className={classNames(styles.button)}
-                onClick={() => handleClick(shortcut)}
-              >
-                <div
-                  className={classNames(
-                    styles.image,
-                    isFull && styles.imageFull
-                  )}
+    <div className={classNames(styles.wrapper)}>
+      <div className={classNames(styles.shortcuts)}>
+        <ul className={classNames(styles.list)}>
+          {shortcuts.map((shortcut) => {
+            const { iconPath, id, title, isFull } = shortcut;
+            return (
+              <li key={id} className={classNames(styles.item)}>
+                <button
+                  className={classNames(styles.button)}
+                  onClick={() => handleClick(shortcut)}
                 >
-                  <img src={iconPath} alt="" />
-                </div>
-                <span className={classNames(styles.title)}>{title}</span>
-              </button>
-            </li>
-          );
-        })}
-      </ul>
+                  <div
+                    className={classNames(
+                      styles.image,
+                      isFull && styles.imageFull
+                    )}
+                  >
+                    <img src={iconPath} alt="" />
+                  </div>
+                  <span className={classNames(styles.title)}>{title}</span>
+                </button>
+              </li>
+            );
+          })}
+        </ul>
+      </div>
     </div>
   );
 }

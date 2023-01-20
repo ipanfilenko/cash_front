@@ -28,14 +28,14 @@ function News() {
 
   return (
     <div className={classNames(styles.news)}>
-      <Adsense
+      {/* <Adsense
         client={`${NEXT_PUBLIC_ADSENSE_KEY}`}
         slot="7466683631"
         format="auto"
         responsive="true"
         style={{ display: "block" }}
         key="adsense-banner"
-      />
+      /> */}
 
       <ul className={styles.list} key="list">
         {newsList.map((news, index) => {
@@ -52,7 +52,7 @@ function News() {
 
           return (
             <React.Fragment key={id + websiteTitle}>
-              {index === 1 && (
+              {/* {index === 1 && (
                 <li key="adsense-news" className={styles.item}>
                   <div className={styles.itemBox}>
                     <Adsense
@@ -64,7 +64,7 @@ function News() {
                     />
                   </div>
                 </li>
-              )}
+              )} */}
               <li className={styles.item} key={id + websiteTitle}>
                 <div className={styles.itemBox}>
                   <div

@@ -13,26 +13,18 @@
 
 .item {
   padding: 0 8px;
-  width: 50%;
+  width: 100%;
   &:last-child {
     padding-bottom: 0;
-  }
-  @media (max-width: $portrait) {
-    width: 100%;
-    &:last-child {
-      .itemBox {
-        border-bottom: 0;
-      }
+    .itemBox {
+      border-bottom: 0;
     }
   }
 }
 
 .itemBox {
-  padding: 15px;
+  padding: 15px 0;
   border-bottom: 1px solid $divider;
-  @media (max-width: $portrait) {
-    padding: 15px 0;
-  }
 }
 
 .top {
