@@ -1,9 +1,9 @@
 ---
 title: 'Cashback Services Explained'
-image: '/images/articles/cashback/thumbnail/cashback-services.jpg'
+image: '/images/articles/cashback/thumbnail/3.jpg'
 ---
 
-![Cashback Services Explained](/images/articles/cashback/cashback-services.jpg)
+![Cashback Services Explained](/images/articles/cashback/3.jpg)
 
 # Cashback Services Explained
 

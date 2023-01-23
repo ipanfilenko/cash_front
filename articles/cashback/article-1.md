@@ -1,9 +1,9 @@
 ---
 title: 'Worldwide CashBack services'
-image: '/images/articles/cashback/thumbnail/worldwide.png'
+image: '/images/articles/cashback/thumbnail/1.png'
 ---
 
-![Worldwide CashBack services](/images/articles/cashback/worldwide.png)
+![Worldwide CashBack services](/images/articles/cashback/1.png)
 
 # Worldwide CashBack services
 

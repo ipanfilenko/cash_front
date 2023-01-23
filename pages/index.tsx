@@ -1,33 +1,15 @@
 import Head from "next/head";
-import matter from "gray-matter";
-import { readdir, readFile } from "node:fs/promises";
+
 
 import Search from "../components/Search";
 import Shortcuts from "../components/Shortcuts";
 import News from "../components/News";
-import Articles, { ArticleType, IArticlesProps } from "../components/Articles";
-
-const getCashbackArticles = async (type: ArticleType) => {
-  const files = await readdir(`articles/${type}`);
-
-  const promises = files.map(async (fileName) => {
-    const slug = fileName.replace(".md", "");
-    const file = await readFile(`articles/${type}/${fileName}`, "utf-8");
-
-    const { data: frontmatter } = matter(file);
-
-    return {
-      slug,
-      frontmatter,
-    };
-  });
-  const articles = await Promise.all(promises);
-  return articles;
-};
+import Articles, { IArticlesProps } from "../components/Articles";
+import articleService from "../services/articleService";
 
 export async function getServerSideProps() {
-  const cashbackArticles = await getCashbackArticles("cashback");
-  const cricketkArticles = await getCashbackArticles("cricket");
+  const cashbackArticles = await articleService.getAllByCategory("cashback");
+  const cricketkArticles = await articleService.getAllByCategory("cricket");
   return {
     props: {
       cashbackArticles,

@@ -1,9 +1,9 @@
 ---
 title: 'Most popular Indian CashBack services'
-image: '/images/articles/cashback/thumbnail/most-popular.png'
+image: '/images/articles/cashback/thumbnail/2.png'
 ---
 
-![Most popular Indian CashBack services](/images/articles/cashback/most-popular.png)
+![Most popular Indian CashBack services](/images/articles/cashback/2.png)
 
 # Most popular Indian CashBack services
 

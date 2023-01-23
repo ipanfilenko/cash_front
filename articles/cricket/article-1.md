@@ -1,9 +1,9 @@
 ---
 title: 'TOP-10 Cricket players earnings'
-image: '/images/articles/cashback/thumbnail/worldwide.png'
+image: '/images/articles/cricket/thumbnail/1.png'
 ---
 
-![TOP-10 Cricket players earnings](/images/articles/cashback/1.png)
+![TOP-10 Cricket players earnings](/images/articles/cricket/1.png)
 
 # TOP-10 Cricket players earnings
 
