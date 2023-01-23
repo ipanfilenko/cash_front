@@ -7,7 +7,7 @@ import News from "../components/News";
 import Articles, { IArticlesProps } from "../components/Articles";
 import articleService from "../services/articleService";
 
-export async function getServerSideProps() {
+export async function getStaticProps() {
   const cashbackArticles = await articleService.getAllByCategory("cashback");
   const cricketkArticles = await articleService.getAllByCategory("cricket");
   return {
