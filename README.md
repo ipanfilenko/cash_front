@@ -13,12 +13,16 @@ yarn dev
 ## Deploy API to server
 
   
- 1. connect by ssh to the server
+1. connect by ssh to the server
 	- `ssh root@5.187.1.53`
 2. go to workdir and run start script 
 	- `cd /var/www/cash`
 	- `sh start.sh `
 
+## Deploy static pages to cashbro.space
+1. create build and archive it
+	- `yarn build`
+	- archive `out` folder
 
 ## Learn More
 
