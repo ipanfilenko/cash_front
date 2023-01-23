@@ -23,6 +23,15 @@ yarn dev
 1. create build and archive it
 	- `yarn build`
 	- archive `out` folder
+2. download to server 
+	- go to isp manager => File manager
+	- upload out.zip
+	- extract out.zip into cashbro.space dir (root project dir)
+	- go to Shell-client
+	- `cd www/cashbro.space/ `
+	- `cp -rf out/* ./  `
+	- `rm -rf out`
+	- `rm out.zip`
 
 ## Learn More
 
