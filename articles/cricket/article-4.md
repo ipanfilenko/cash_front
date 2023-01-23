@@ -1,9 +1,9 @@
 ---
 title: 'Mahendra Singh Dhoni #3 TOP-10 highest paid cricket players in India'
-image: '/images/articles/cricket/thumbnail/4.png'
+image: '/images/articles/cricket/thumbnail/4.jpg'
 ---
 
-![Mahendra Singh Dhoni #3 TOP-10 highest paid cricket players in India](/images/articles/cricket/4.png)
+![Mahendra Singh Dhoni #3 TOP-10 highest paid cricket players in India](/images/articles/cricket/4.jpg)
 
 # Mahendra Singh Dhoni #3 TOP-10 highest paid cricket players in India
 

@@ -1,9 +1,9 @@
 ---
 title: 'Rohit Sharma #2 TOP-10 highest paid cricket players in India'
-image: '/images/articles/cricket/thumbnail/3.png'
+image: '/images/articles/cricket/thumbnail/3.jpg'
 ---
 
-![Rohit Sharma #2 TOP-10 highest paid cricket players in India](/images/articles/cricket/3.png)
+![Rohit Sharma #2 TOP-10 highest paid cricket players in India](/images/articles/cricket/3.jpg)
 
 # Rohit Sharma #2 TOP-10 highest paid cricket players in India
 

@@ -1,9 +1,9 @@
 ---
 title: 'How to earn through Cashback'
-image: '/images/articles/cashback/thumbnail/4.png'
+image: '/images/articles/cashback/thumbnail/4.jpg'
 ---
 
-![How to earn through Cashback](/images/articles/cashback/4.png)
+![How to earn through Cashback](/images/articles/cashback/4.jpg)
 
 # How to earn through Cashback
 

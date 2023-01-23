@@ -53,7 +53,7 @@ function News() {
 
           return (
             <React.Fragment key={id + websiteTitle}>
-              {/* {index === 1 && (
+              {index === 1 && (
                 <li key="adsense-news" className={styles.item}>
                   <div className={styles.itemBox}>
                     <Adsense
@@ -65,7 +65,7 @@ function News() {
                     />
                   </div>
                 </li>
-              )} */}
+              )}
               <li className={styles.item} key={id + websiteTitle}>
                 <div className={styles.itemBox}>
                   <div

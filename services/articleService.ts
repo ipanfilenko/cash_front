@@ -25,6 +25,7 @@ class ArticleService {
   public async getSpecific(type: ArticleType, slug: string) {
     const fileName = await readFile(`articles/${type}/${slug}.md`, "utf-8");
     const { content } = matter(fileName);
+    return content;
   }
 }
 

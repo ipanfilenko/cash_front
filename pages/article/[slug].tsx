@@ -36,7 +36,7 @@ export async function getStaticProps(
 ) {
   const [type, slug] = context.params.slug.split("_");
 
-  const content = articleService.getSpecific(type, slug);
+  const content = await articleService.getSpecific(type, slug);
 
   const articles = await articleService.getAllByCategory(type);
   const filteredArticles = articles.filter((article) => article.slug !== slug);

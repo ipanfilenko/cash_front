@@ -1,9 +1,9 @@
 ---
 title: 'How to become the best cricket player'
-image: '/images/articles/cricket/thumbnail/4.png'
+image: '/images/articles/cricket/thumbnail/4.jpg'
 ---
 
-![How to become the best cricket player](/images/articles/cashback/4.png)
+![How to become the best cricket player](/images/articles/cashback/4.jpg)
 
 # How to become the best cricket player
 

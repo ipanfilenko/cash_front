@@ -1,9 +1,9 @@
 ---
 title: 'Virat Kohli #1 TOP-10 highest paid cricket players in India'
-image: '/images/articles/cricket/thumbnail/2.png'
+image: '/images/articles/cricket/thumbnail/2.jpg'
 ---
 
-![Virat Kohli #1 TOP-10 highest paid cricket players in India](/images/articles/cricket/2.png)
+![Virat Kohli #1 TOP-10 highest paid cricket players in India](/images/articles/cricket/2.jpg)
 
 # Virat Kohli #1 TOP-10 highest paid cricket players in India
 

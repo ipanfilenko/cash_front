@@ -32,10 +32,11 @@
   }
   .image-container {
     padding: 0;
-    margin-bottom: 30px;
     position: relative;
-		border-radius: 20px;
-		overflow: hidden;
+    border-radius: 20px;
+    overflow: hidden;
+    display: table;
+    margin: 0 auto 30px;
     &:after {
       content: "";
       position: absolute;
