@@ -1,9 +1,9 @@
 ---
 title: '2023 Cricket series Schedule'
-image: '/images/articles/cricket/thumbnail/4.jpg'
+image: '/images/articles/cricket/thumbnail/5.jpg'
 ---
 
-![2023 Cricket series Schedule](/images/articles/cricket/4.jpg)
+![2023 Cricket series Schedule](/images/articles/cricket/5.jpg)
 
 # 2023 Cricket series Schedule
 
