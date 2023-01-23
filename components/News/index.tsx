@@ -28,14 +28,15 @@ function News() {
 
   return (
     <div className={classNames(styles.news)}>
-      {/* <Adsense
+      <Adsense
         client={`${NEXT_PUBLIC_ADSENSE_KEY}`}
         slot="7466683631"
         format="auto"
         responsive="true"
         style={{ display: "block" }}
         key="adsense-banner"
-      /> */}
+        
+      />
 
       <ul className={styles.list} key="list">
         {newsList.map((news, index) => {

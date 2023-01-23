@@ -1,11 +1,12 @@
 /* eslint-disable @next/next/no-img-element */
 import Link from "next/link";
 import classNames from "classnames";
-import React from "react";
+import React, { ReactNode } from "react";
 import Slider from "react-slick";
 import styles from "./style.module.scss";
 import Icon from "../shared/icons";
-import Wrapper from "../Wrapper";
+
+export type ArticleType = "cashback" | "cricket";
 
 interface IArticle {
   slug: string;
@@ -17,10 +18,13 @@ interface IArticle {
 }
 
 export interface IArticlesProps {
+  type: ArticleType;
   articles: IArticle[];
+  title: string | ReactNode;
+  className?: string;
 }
 
-function Articles({ articles }: IArticlesProps) {
+function Articles({ articles, title, className, type }: IArticlesProps) {
   const settings = {
     dots: false,
     arrows: false,
@@ -35,8 +39,8 @@ function Articles({ articles }: IArticlesProps) {
   };
 
   return (
-    <div className={classNames(styles.article)}>
-      <span className={classNames(styles.mainTitle)}>Articles</span>
+    <div className={classNames(styles.article, className)}>
+      <span className={classNames(styles.mainTitle)}>{title}</span>
       <Slider {...settings}>
         {articles.map((article) => (
           <div
@@ -49,7 +53,10 @@ function Articles({ articles }: IArticlesProps) {
                 src={article.frontmatter.image}
                 alt=""
               />
-              <Link href={article.slug} className={classNames(styles.bottom)}>
+              <Link
+                href={`/article/${type}_${article.slug}`}
+                className={classNames(styles.bottom)}
+              >
                 <span className={classNames(styles.title)}>
                   {article.frontmatter.title}
                 </span>

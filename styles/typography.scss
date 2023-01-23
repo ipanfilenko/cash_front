@@ -1,0 +1,53 @@
+@import "./variables";
+
+.static-content {
+  font-family: $font;
+  color: $shortcutText;
+  img {
+    display: block;
+    max-width: 100%;
+    margin: 0 auto;
+    max-height: 300px;
+
+    & p {
+      display: block;
+    }
+  }
+  h1 {
+    font-size: 20px;
+    line-height: 25px;
+    margin: 0;
+    padding-bottom: 20px;
+  }
+  p {
+    font-size: 16px;
+    line-height: 28px;
+    margin: 0;
+    padding-bottom: 30px;
+  }
+
+  ol {
+    margin: 0;
+    padding: 0 0 30px 15px;
+  }
+  .image-container {
+    padding: 0;
+    margin-bottom: 30px;
+    position: relative;
+		border-radius: 20px;
+		overflow: hidden;
+    &:after {
+      content: "";
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: linear-gradient(
+        180deg,
+        rgba(254, 234, 59, 0) 30%,
+        #feea3b 116.87%
+      );
+    }
+  }
+}
