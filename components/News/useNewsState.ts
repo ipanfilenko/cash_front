@@ -1,6 +1,7 @@
 import { useQuery } from "react-query";
 import { useRouter } from "next/router";
 import NewsDto from "./news.type";
+import androidService from "../../services/androidService";
 
 const nodeEnv = process.env.NODE_ENV;
 
@@ -14,7 +15,6 @@ export enum ActionsEnum {
   COPY_LINK_ADDRESS = "copy-link",
   COPY_LINK_TEXT = "copy-text",
 }
-
 
 function useNewsState() {
   const router = useRouter();
@@ -41,12 +41,19 @@ function useNewsState() {
     },
   ];
 
-  const handleSelectAction = (news: NewsDto, action: ActionsEnum) => {};
+  const handleSelectAction = (news: NewsDto, action: ActionsEnum) => {
+    if (action === ActionsEnum.OPEN_IN_NEW_TAB) {
+      androidService.loadUrlInNewTab(news.website);
+    }
+  };
 
   const handleOpenNews = (news: NewsDto) => {
     router.push(news.visualUrl ?? news.website);
   };
 
+  const handleShare = (news: NewsDto) => {
+    androidService.share(news.website);
+  };
 
   return {
     newsList: data,
@@ -54,6 +61,7 @@ function useNewsState() {
     dropdownOptions,
     handleSelectAction,
     handleOpenNews,
+    handleShare,
   };
 }
 

@@ -1,15 +1,23 @@
 class AndroidService {
-  loadUrl(url: string) {}
+  loadUrl(url: string) {
+    window.CashbroInterface?.loadUrl(url);
+  }
 
-  loadUrlInNewTab(url: string) {}
+  loadUrlInNewTab(url: string) {
+    window.CashbroInterface?.loadUrlInNewTab(url);
+  }
 
-  share(url: string) {}
+  share(url: string) {
+    window.CashbroInterface?.share(url);
+  }
+
+  search() {
+    window.CashbroInterface?.search();
+  }
 
   copyLinkText(text: string) {}
 
   copyLinkAddress(url: string) {}
-
-  search() {}
 }
 
 export default new AndroidService();

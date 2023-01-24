@@ -20,6 +20,7 @@ function News() {
     dropdownOptions,
     handleSelectAction,
     handleOpenNews,
+    handleShare,
   } = useNewsState();
 
   if (isLoading || !newsList) {
@@ -97,6 +98,7 @@ function News() {
                       </span>
                     </div>
                     <Action
+                      handleShare={handleShare}
                       handleSelectAction={handleSelectAction}
                       news={news}
                       dropdownOptions={dropdownOptions}

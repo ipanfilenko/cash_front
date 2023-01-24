@@ -11,17 +11,23 @@ import NewsDto from "../news.type";
 interface IActionProps {
   news: NewsDto;
   handleSelectAction(news: NewsDto, action: ActionsEnum): void;
+  handleShare(news: NewsDto): void;
   dropdownOptions: { label: string; value: ActionsEnum }[];
 }
 
-function Action({ handleSelectAction, news, dropdownOptions }: IActionProps) {
+function Action({
+  handleSelectAction,
+  handleShare,
+  news,
+  dropdownOptions,
+}: IActionProps) {
   const clipboardMapper = {
     [ActionsEnum.COPY_LINK_ADDRESS]: "website" as const,
     [ActionsEnum.COPY_LINK_TEXT]: "websiteTitle" as const,
   };
   return (
     <div className={classNames(styles.actions)}>
-      <button className={styles.actionButton}>
+      <button className={styles.actionButton} onClick={() => handleShare(news)}>
         <Icon name="share" />
       </button>
       <Dropdown
