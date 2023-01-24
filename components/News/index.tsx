@@ -1,6 +1,6 @@
 import React from "react";
 import Image from "next/image";
-import useNewsState, { ActionsEnum } from "./useNewsState";
+import useNewsState from "./useNewsState";
 import styles from "./style.module.scss";
 import classNames from "classnames";
 import dayjs from "dayjs";
@@ -35,7 +35,6 @@ function News() {
         responsive="true"
         style={{ display: "block" }}
         key="adsense-banner"
-        
       />
 
       <ul className={styles.list} key="list">

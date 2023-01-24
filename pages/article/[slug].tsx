@@ -1,12 +1,14 @@
-import { readdir, readFile } from "node:fs/promises";
+import { readdir } from "node:fs/promises";
 import { useEffect, useRef } from "react";
-import matter from "gray-matter";
 import md from "markdown-it";
-import Articles, { IArticlesProps } from "../../components/Articles";
+import { useRouter } from "next/router";
+import Articles, {
+  ArticleType,
+  IArticlesProps,
+} from "../../components/Articles";
 import classNames from "classnames";
 import styles from "./style.module.scss";
 import Button from "../../components/shared/button";
-import { useRouter } from "next/router";
 import articleService from "../../services/articleService";
 
 export async function getStaticPaths(context: any) {
@@ -42,6 +44,7 @@ export async function getStaticProps(
   const filteredArticles = articles.filter((article) => article.slug !== slug);
   return {
     props: {
+      type,
       content,
       articles: filteredArticles,
     },
@@ -49,19 +52,22 @@ export async function getStaticProps(
 }
 
 export default function ArticlePage({
+  type,
   content,
   articles,
-}: { content: string } & IArticlesProps) {
-  const router = useRouter();
-  const data = router;
+}: { content: string; type: ArticleType } & IArticlesProps) {
   const container = useRef<HTMLDivElement>(null);
+
+  const router = useRouter();
+  const pathname = router.asPath;
 
   useEffect(() => {
     const images = container.current?.querySelectorAll("img");
+
     images?.forEach((image) => {
       image.parentElement?.classList.add("image-container");
     });
-  }, []);
+  }, [pathname]);
 
   return (
     <div>
@@ -72,7 +78,7 @@ export default function ArticlePage({
         />
       </div>
       <Articles
-        type="cashback"
+        type={type}
         className={classNames(styles.list)}
         title="Other Articles"
         articles={articles}

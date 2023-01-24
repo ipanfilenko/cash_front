@@ -5,6 +5,7 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import "../styles/main.scss";
 import { QueryClient, QueryClientProvider } from "react-query";
+import { GoogleAnalytics } from "nextjs-google-analytics";
 import { ThemeContext } from "../context/theme";
 import Wrapper from "../components/Wrapper";
 
@@ -20,6 +21,7 @@ export default function App({ Component, pageProps }: AppProps) {
       <QueryClientProvider client={queryClient}>
         <ThemeContext.Provider value={themeName}>
           <Wrapper>
+            <GoogleAnalytics trackPageViews />
             <Component {...pageProps} />
           </Wrapper>
         </ThemeContext.Provider>
