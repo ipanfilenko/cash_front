@@ -6,13 +6,17 @@ import ShortcutModel, { Shortcut } from "./shortcuts.model";
 import styles from "./style.module.scss";
 
 import androidService from "../../services/androidService";
+import ShortcutEnum from "./shortcut.enum";
 
 function Shortcuts() {
   const shortcuts = ShortcutModel.favorite;
   const router = useRouter();
 
   const handleClick = (shortcut: Shortcut) => {
-    androidService.loadUrl(shortcut.url ?? "new");
+    if (shortcut.id === ShortcutEnum.EARNINGS) {
+      androidService.openEarnings();
+      return;
+    }
     if (shortcut.url) {
       router.push(shortcut.url ?? "");
     }

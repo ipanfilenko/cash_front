@@ -1,6 +1,6 @@
 class AndroidService {
-  loadUrl(url: string) {
-    window.CashbroInterface?.loadUrl(url);
+  openEarnings() {
+    window.CashbroInterface?.openEarnings();
   }
 
   loadUrlInNewTab(url: string) {
@@ -14,10 +14,6 @@ class AndroidService {
   search() {
     window.CashbroInterface?.search();
   }
-
-  copyLinkText(text: string) {}
-
-  copyLinkAddress(url: string) {}
 }
 
 export default new AndroidService();
