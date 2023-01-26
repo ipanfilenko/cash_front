@@ -1,6 +1,7 @@
 ---
 title: 'How to earn through Cashback'
 image: '/images/articles/cashback/thumbnail/4.jpg'
+description: 'Cash back rewards are a popular way for Indian consumers to earn money on their everyday purchases. These rewards can be earned through a variety of different cash back services and apps, each with their own unique features and benefits.'
 ---
 
 ![How to earn through Cashback](/images/articles/cashback/4.jpg)

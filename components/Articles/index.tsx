@@ -13,6 +13,7 @@ interface IArticle {
   frontmatter: {
     title: string;
     image: string;
+    description: string;
     slug: string;
   };
 }
@@ -59,6 +60,9 @@ function Articles({ articles, title, className, type }: IArticlesProps) {
               >
                 <span className={classNames(styles.title)}>
                   {article.frontmatter.title}
+                </span>
+                <span className={classNames(styles.description)}>
+                  {article.frontmatter.description}
                 </span>
                 <span className={classNames(styles.link)}>
                   <span className={classNames(styles.linkText)}>

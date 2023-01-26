@@ -1,6 +1,7 @@
 ---
 title: 'Rohit Sharma #2 TOP-10 highest paid cricket players in India'
 image: '/images/articles/cricket/thumbnail/3.jpg'
+description: 'Rohit Sharma is an Indian cricketer who is considered one of the best openers in the world. He is known for his aggressive and powerful batting style, as well as his ability to score runs quickly. He is also the captain of the Indian national team in the limited-overs format.'
 ---
 
 ![Rohit Sharma #2 TOP-10 highest paid cricket players in India](/images/articles/cricket/3.jpg)

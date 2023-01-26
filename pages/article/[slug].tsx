@@ -10,11 +10,13 @@ import classNames from "classnames";
 import styles from "./style.module.scss";
 import Button from "../../components/shared/button";
 import articleService from "../../services/articleService";
+import Wrapper from "../../components/Wrapper";
 
-export async function getStaticPaths(context: any) {
+export async function getStaticPaths() {
   const dirs = await readdir("articles");
   const allDirs = dirs.map(async (dirname) => {
     const files = await readdir(`articles/${dirname}`);
+
     return files.map((file) => `${dirname}_${file.replace(".md", "")}`);
   });
 
@@ -70,7 +72,7 @@ export default function ArticlePage({
   }, [pathname]);
 
   return (
-    <div>
+    <Wrapper>
       <div className={classNames("static-content", styles.content)}>
         <div
           ref={container}
@@ -86,6 +88,6 @@ export default function ArticlePage({
       <Button as="link" href="/" className={classNames(styles.button)}>
         Main page
       </Button>
-    </div>
+    </Wrapper>
   );
 }

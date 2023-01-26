@@ -1,11 +1,12 @@
 ---
-title: 'Most popular Indian CashBack services'
-image: '/images/articles/cashback/thumbnail/2.jpg'
+title: 'Worldwide CashBack services'
+image: '/images/articles/cashback/thumbnail/1.jpg'
+description: 'Cashback services are becoming increasingly popular in India as they offer customers the opportunity to earn money back on their purchases. These services are provided by a variety of companies and platforms, including digital wallets, e-commerce platforms, and payment providers.'
 ---
 
-![Most popular Indian CashBack services](/images/articles/cashback/2.jpg)
+![Worldwide CashBack services](/images/articles/cashback/1.jpg)
 
-# Most popular Indian CashBack services
+# Worldwide CashBack services
 
 Cashback services are becoming increasingly popular in India as they offer customers the opportunity to earn money back on their purchases. These services are provided by a variety of companies and platforms, including digital wallets, e-commerce platforms, and payment providers.
 

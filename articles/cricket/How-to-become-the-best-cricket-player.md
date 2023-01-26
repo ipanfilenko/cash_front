@@ -1,6 +1,7 @@
 ---
 title: 'How to become the best cricket player'
 image: '/images/articles/cricket/thumbnail/6.jpg'
+description: 'To become the best cricketer in the world, and specifically in India, there are certain qualities that one must possess and work on consistently. In addition to the technical skills required to excel in the sport, certain mental and physical attributes are necessary to reach the top level of the game.'
 ---
 
 ![How to become the best cricket player](/images/articles/cricket/6.jpg)

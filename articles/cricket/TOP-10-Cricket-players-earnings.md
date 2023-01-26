@@ -1,6 +1,7 @@
 ---
 title: 'TOP-10 Cricket players earnings'
 image: '/images/articles/cricket/thumbnail/1.jpg'
+description: 'Cricket is one of the most popular sports in India, and it is also one of the most lucrative. Many of India`s top cricket players earn large salaries, thanks to the combination of their talent on the field and their marketability off the field.'
 ---
 
 ![TOP-10 Cricket players earnings](/images/articles/cricket/1.jpg)

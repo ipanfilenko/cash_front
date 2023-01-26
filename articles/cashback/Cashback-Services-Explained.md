@@ -1,6 +1,7 @@
 ---
 title: 'Cashback Services Explained'
 image: '/images/articles/cashback/thumbnail/3.jpg'
+description: 'Cashback services are a type of rewards program that allows customers to receive a percentage of their purchase amount back in the form of cash or credit. These services are typically offered by credit card companies, retailers, or online marketplaces as an incentive for customers to make purchases.'
 ---
 
 ![Cashback Services Explained](/images/articles/cashback/3.jpg)

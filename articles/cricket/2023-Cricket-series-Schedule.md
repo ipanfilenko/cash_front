@@ -1,6 +1,7 @@
 ---
 title: '2023 Cricket series Schedule'
 image: '/images/articles/cricket/thumbnail/5.jpg'
+description: 'The cricket schedule for India in 2023 includes several important series and tournaments that will feature some of the best teams from around the world.'
 ---
 
 ![2023 Cricket series Schedule](/images/articles/cricket/5.jpg)

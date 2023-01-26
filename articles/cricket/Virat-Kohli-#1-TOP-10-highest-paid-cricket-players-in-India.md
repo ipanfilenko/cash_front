@@ -1,6 +1,7 @@
 ---
 title: 'Virat Kohli #1 TOP-10 highest paid cricket players in India'
 image: '/images/articles/cricket/thumbnail/2.jpg'
+description: 'Virat Kohli is considered one of the best batsmen in the world and the captain of the Indian national cricket team. He is known for his aggressive and passionate playing style, as well as his work ethic and dedication to the sport.'
 ---
 
 ![Virat Kohli #1 TOP-10 highest paid cricket players in India](/images/articles/cricket/2.jpg)

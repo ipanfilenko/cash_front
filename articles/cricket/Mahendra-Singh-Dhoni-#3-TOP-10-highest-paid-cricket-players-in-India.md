@@ -1,6 +1,7 @@
 ---
 title: 'Mahendra Singh Dhoni #3 TOP-10 highest paid cricket players in India'
 image: '/images/articles/cricket/thumbnail/4.jpg'
+description: 'Mahendra Singh Dhoni, commonly known as MS Dhoni, is a former Indian cricketer and captain of the Indian national team. He is considered one of the greatest cricketers of all time and known for his calm and composed leadership on the field.'
 ---
 
 ![Mahendra Singh Dhoni #3 TOP-10 highest paid cricket players in India](/images/articles/cricket/4.jpg)
