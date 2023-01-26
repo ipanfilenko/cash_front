@@ -7,7 +7,6 @@ import "../styles/main.scss";
 import { QueryClient, QueryClientProvider } from "react-query";
 import { GoogleAnalytics } from "nextjs-google-analytics";
 import { ThemeContext } from "../context/theme";
-import Wrapper from "../components/Wrapper";
 
 const queryClient = new QueryClient();
 
@@ -20,10 +19,8 @@ export default function App({ Component, pageProps }: AppProps) {
     <>
       <QueryClientProvider client={queryClient}>
         <ThemeContext.Provider value={themeName}>
-          <Wrapper>
-            <GoogleAnalytics trackPageViews />
-            <Component {...pageProps} />
-          </Wrapper>
+          <GoogleAnalytics trackPageViews />
+          <Component {...pageProps} />
         </ThemeContext.Provider>
       </QueryClientProvider>
     </>

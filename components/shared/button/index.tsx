@@ -10,6 +10,7 @@ interface IButtonProps {
   href?: string;
   children: ReactNode;
   className?: string;
+  target?: React.HTMLAttributeAnchorTarget;
 }
 
 function Button({
@@ -18,6 +19,7 @@ function Button({
   onClick,
   href = "",
   className,
+  target,
 }: IButtonProps) {
   if (as === "button") {
     return (
@@ -33,6 +35,7 @@ function Button({
   if (as === "link") {
     return (
       <Link
+        target={target}
         href={href}
         onClick={onClick}
         className={classNames(styles.button, className)}

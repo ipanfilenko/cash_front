@@ -1,0 +1,113 @@
+@import "styles/variables";
+
+.wrapper {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+.mobile {
+  padding: 50px 0;
+  height: calc(100vh - $headerHeight);
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid $divider;
+  img {
+    display: block;
+    max-width: 50%;
+    margin: 0 auto;
+    max-height: 100%;
+    object-fit: contain;
+    object-position: top;
+  }
+}
+
+.mobileRight {
+  padding-left: 25px;
+}
+
+.mobileTitle {
+  font-size: 26px;
+  line-height: 25px;
+  margin: 0;
+  padding-bottom: 20px;
+}
+
+.mobileSubtitle {
+  display: block;
+  color: $textColor;
+  opacity: 0.5;
+  padding-bottom: 30px;
+  line-height: 25px;
+}
+
+.mobileButton {
+  max-width: 270px;
+}
+
+.mission {
+  border-bottom: 1px solid $divider;
+  padding: 50px 0;
+}
+
+.missionTitle {
+  padding: 0 0 25px;
+  text-align: center;
+}
+
+.missionText {
+  text-align: center;
+  display: block;
+  line-height: 25px;
+}
+
+.reviews {
+  padding: 50px 0;
+  border-bottom: 1px solid $divider;
+}
+
+.reviewsTitle {
+  padding: 0 0 25px;
+}
+
+.reviewsList {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 -15px;
+}
+
+.reviewsItem {
+  width: 50%;
+  padding: 0 15px 15px;
+}
+
+.reviewsAuthor {
+  display: flex;
+  align-items: center;
+  padding-bottom: 15px;
+  img {
+    display: block;
+    width: 60px;
+    height: 60px;
+    border-radius: 6px;
+  }
+  span {
+    display: block;
+    font-size: 18px;
+    font-weight: 500;
+    padding-left: 15px;
+  }
+}
+
+.reviewsComment {
+  font-size: 16px;
+  display: block;
+  color: $textColor;
+  opacity: 0.5;
+  line-height: 25px;
+}
+
+
+.articles {
+  padding: 50px 0;
+}

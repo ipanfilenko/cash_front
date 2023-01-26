@@ -15,16 +15,19 @@ const setCSSVariables = (theme: Theme): void => {
 
 interface WrapperProps {
   children: ReactNode;
+  className?: string;
 }
 
-function Wrapper({ children }: WrapperProps) {
+function Wrapper({ children, className }: WrapperProps) {
   const themeName = useContext(ThemeContext);
 
   useEffect(() => {
     setCSSVariables(theme[themeName]);
   });
 
-  return <div className={classNames(styles.wrapper)}>{children}</div>;
+  return (
+    <div className={classNames(styles.wrapper, className)}>{children}</div>
+  );
 }
 
 export default Wrapper;
