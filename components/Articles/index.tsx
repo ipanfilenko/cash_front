@@ -8,14 +8,16 @@ import Icon from "../shared/icons";
 
 export type ArticleType = "cashback" | "cricket";
 
-interface IArticle {
+export interface IFrontmatter {
+  title: string;
+  image: string;
+  description: string;
   slug: string;
-  frontmatter: {
-    title: string;
-    image: string;
-    description: string;
-    slug: string;
-  };
+}
+
+export interface IArticle {
+  slug: string;
+  frontmatter: IFrontmatter;
 }
 
 export interface IArticlesProps {
@@ -55,7 +57,7 @@ function Articles({ articles, title, className, type }: IArticlesProps) {
                 alt=""
               />
               <Link
-                href={`/article/${type}_${article.slug}`}
+                href={`/article/${type}/${article.slug}`}
                 className={classNames(styles.bottom)}
               >
                 <span className={classNames(styles.title)}>

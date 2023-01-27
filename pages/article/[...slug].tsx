@@ -4,20 +4,24 @@ import md from "markdown-it";
 import { useRouter } from "next/router";
 import Articles, {
   ArticleType,
+  IArticle,
   IArticlesProps,
+  IFrontmatter,
 } from "../../components/Articles";
 import classNames from "classnames";
 import styles from "./style.module.scss";
 import Button from "../../components/shared/button";
 import articleService from "../../services/articleService";
 import Wrapper from "../../components/Wrapper";
+import Head from "next/head";
+import Layout from "../../components/Layout";
 
 export async function getStaticPaths() {
   const dirs = await readdir("articles");
   const allDirs = dirs.map(async (dirname) => {
     const files = await readdir(`articles/${dirname}`);
 
-    return files.map((file) => `${dirname}_${file.replace(".md", "")}`);
+    return files.map((file) => [dirname, file.replace(".md", "")]);
   });
 
   const files = await Promise.all(allDirs);
@@ -33,14 +37,15 @@ export async function getStaticPaths() {
     fallback: false,
   };
 }
+
 export async function getStaticProps(
   context: {
     params: any;
   } & IArticlesProps
 ) {
-  const [type, slug] = context.params.slug.split("_");
+  const [type, slug] = context.params.slug;
 
-  const content = await articleService.getSpecific(type, slug);
+  const { content, frontmatter } = await articleService.getSpecific(type, slug);
 
   const articles = await articleService.getAllByCategory(type);
   const filteredArticles = articles.filter((article) => article.slug !== slug);
@@ -48,6 +53,7 @@ export async function getStaticProps(
     props: {
       type,
       content,
+      currentArticle: { frontmatter, content },
       articles: filteredArticles,
     },
   };
@@ -55,13 +61,18 @@ export async function getStaticProps(
 
 export default function ArticlePage({
   type,
-  content,
+  currentArticle,
   articles,
-}: { content: string; type: ArticleType } & IArticlesProps) {
+}: {
+  currentArticle: { content: string; frontmatter: IFrontmatter };
+  type: ArticleType;
+  articles: IArticle[];
+}) {
   const container = useRef<HTMLDivElement>(null);
 
   const router = useRouter();
   const pathname = router.asPath;
+  const { content, frontmatter } = currentArticle;
 
   useEffect(() => {
     const images = container.current?.querySelectorAll("img");
@@ -72,22 +83,31 @@ export default function ArticlePage({
   }, [pathname]);
 
   return (
-    <Wrapper>
-      <div className={classNames("static-content", styles.content)}>
-        <div
-          ref={container}
-          dangerouslySetInnerHTML={{ __html: md().render(content) }}
-        />
-      </div>
-      <Articles
-        type={type}
-        className={classNames(styles.list)}
-        title="Other Articles"
-        articles={articles}
-      />
-      <Button as="link" href="/" className={classNames(styles.button)}>
-        Main page
-      </Button>
-    </Wrapper>
+    <>
+      <Head>
+        <title>{frontmatter.title}</title>
+        <meta name="description" content={frontmatter.description} />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+      </Head>
+      <Layout>
+        <Wrapper>
+          <div className={classNames("static-content", styles.content)}>
+            <div
+              ref={container}
+              dangerouslySetInnerHTML={{ __html: md().render(content) }}
+            />
+          </div>
+          <Articles
+            type={type}
+            className={classNames(styles.list)}
+            title="Other Articles"
+            articles={articles}
+          />
+          <Button as="link" href="/" className={classNames(styles.button)}>
+            Main page
+          </Button>
+        </Wrapper>
+      </Layout>
+    </>
   );
 }

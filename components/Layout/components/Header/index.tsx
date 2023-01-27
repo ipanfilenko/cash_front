@@ -14,11 +14,11 @@ const navigationList = [
   },
   {
     label: "Contact",
-    path: "/contact-us",
+    path: "/contact",
   },
   {
     label: "About",
-    path: "/about-us",
+    path: "/about",
   },
 ];
 
