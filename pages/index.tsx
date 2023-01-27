@@ -45,7 +45,7 @@ export default function Home({
           <div className={styles.mobile}>
             <Image
               className={styles.mobileImage}
-              src="/images/mobile-app.webp"
+              src="/images/mobile-app.jpg"
               alt="Mobile application"
               width="530"
               height="943"

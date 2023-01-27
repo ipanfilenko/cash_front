@@ -35,3 +35,16 @@
   font-size: 16px;
   font-weight: 500;
 }
+
+@media (max-width: $portrait) {
+  .wrapper {
+    display: block;
+  }
+  .box {
+    padding-bottom: 15px;
+    justify-content: center;
+  }
+  .site {
+    text-align: center;
+  }
+}

@@ -32,7 +32,6 @@
   list-style: none;
   margin: 0 0 0 auto;
   padding: 0 25px 0 0;
-  
 }
 
 .navItem {
@@ -51,4 +50,25 @@
 
 .button {
   width: 150px;
+}
+
+@media (max-width: $portrait) {
+  .header {
+    height: auto;
+  }
+  .box {
+    flex-wrap: wrap;
+  }
+  .logo {
+    order: 1;
+  }
+  .button {
+    order: 2;
+  }
+  .nav {
+    order: 3;
+    width: 100%;
+    padding: 25px 0 0;
+    justify-content: center;
+  }
 }
