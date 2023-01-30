@@ -2,7 +2,15 @@
 
 .footer {
   background: $searchBackground;
-  padding: 9px 0;
+  padding: 11px 0;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: $footerHeight;
+  @media (max-width: $portrait) {
+    height: $mobileFooterHeight;
+  }
 }
 
 .wrapper {
@@ -22,6 +30,7 @@
   img {
     width: 45px;
     height: auto;
+    display: block;
   }
 }
 

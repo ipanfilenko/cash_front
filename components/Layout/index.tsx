@@ -1,6 +1,7 @@
 import React, { ReactNode } from "react";
 import Footer from "./components/Footer";
 import Header from "./components/Header";
+import styles from "./style.module.scss";
 
 interface ILayoutProps {
   children: ReactNode;
@@ -8,9 +9,9 @@ interface ILayoutProps {
 
 function Layout({ children }: ILayoutProps) {
   return (
-    <div>
+    <div className={styles.container}>
       <Header />
-      {children}
+      <div className={styles.wrapper}>{children}</div>
       <Footer />
     </div>
   );

@@ -7,6 +7,7 @@ import classNames from "classnames";
 interface IButtonProps {
   as: "button" | "link";
   onClick?(): void;
+  type?: React.ButtonHTMLAttributes<unknown>["type"];
   href?: string;
   children: ReactNode;
   className?: string;
@@ -20,10 +21,12 @@ function Button({
   href = "",
   className,
   target,
+  type,
 }: IButtonProps) {
   if (as === "button") {
     return (
       <button
+        type={type}
         className={classNames(styles.button, className)}
         onClick={onClick}
       >

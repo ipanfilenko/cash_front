@@ -1,0 +1,80 @@
+@import "styles/variables";
+
+.contacts {
+}
+
+.box {
+  display: flex;
+  @media (max-width: $portrait) {
+    flex-direction: column-reverse;
+    margin: 0 -15px;
+  }
+}
+
+.left {
+  background: #5b7c99;
+  padding: 25px 25px;
+  width: 50%;
+  @media (max-width: $portrait) {
+    width: 100%;
+    padding: 25px 15px;
+  }
+}
+
+.right {
+  background: #e5e9ec;
+  padding: 25px 25px;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  @media (max-width: $portrait) {
+    width: 100%;
+    padding: 25px 15px;
+  }
+}
+
+.contactTitle {
+  display: block;
+  text-align: center;
+  font-size: 20px;
+  color: #000;
+  font-weight: 700;
+  padding-bottom: 25px;
+}
+
+.contactRow {
+  padding-bottom: 25px;
+  line-height: 25px;
+  font-size: 16px;
+  padding-left: 30px;
+  position: relative;
+  &:last-child {
+    padding-bottom: 0;
+  }
+  &:before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+  }
+}
+
+.contactEmail {
+  &:before {
+    background: url("/images/icons/email.svg") no-repeat;
+    width: 20px;
+    height: 20px;
+    background-size: contain;
+  }
+}
+
+.contactAddress {
+  &::before {
+    background: url("/images/icons/address.svg") no-repeat;
+    width: 20px;
+    height: 20px;
+    background-size: contain;
+  }
+}

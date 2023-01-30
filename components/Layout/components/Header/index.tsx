@@ -14,7 +14,7 @@ const navigationList = [
   },
   {
     label: "Contact",
-    path: "/contact",
+    path: "/contacts",
   },
   {
     label: "About",
