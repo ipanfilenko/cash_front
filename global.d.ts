@@ -2,7 +2,7 @@ interface IAndroid {
   search(): void;
   openEarnings(): void;
   loadUrlInNewTab(url: string): void;
-  share(url: string): void;
+  share(title: string, url: string): void;
 }
 
 export {};

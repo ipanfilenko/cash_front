@@ -52,7 +52,7 @@ function useNewsState() {
   };
 
   const handleShare = (news: NewsDto) => {
-    androidService.share(news.website);
+    androidService.share(news.websiteTitle, news.website);
   };
 
   return {

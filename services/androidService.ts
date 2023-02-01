@@ -7,8 +7,8 @@ class AndroidService {
     window.CashbroInterface?.loadUrlInNewTab(url);
   }
 
-  share(url: string) {
-    window.CashbroInterface?.share(url);
+  share(title: string, url: string) {
+    window.CashbroInterface?.share(title, url);
   }
 
   search() {

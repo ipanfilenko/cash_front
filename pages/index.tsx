@@ -148,7 +148,6 @@ export default function Home({
           </div>
           <div className={styles.articles}>
             <Articles
-              type="cashback"
               title={
                 <span>
                   Learn more about <span className="mark">Cashback</span>
@@ -157,7 +156,6 @@ export default function Home({
               articles={cashbackArticles}
             />
             <Articles
-              type="cricket"
               title={
                 <span>
                   Learn more about <span className="mark">Cricket</span>

@@ -7,8 +7,6 @@ import Wrapper from "../../components/Wrapper";
 import styles from "./style.module.scss";
 
 function Contacts() {
-  const [state, setState] = useState();
-  const myArray = [1, 5, 3];
   const handleSubmit = () => {};
 
   return (
@@ -27,7 +25,6 @@ function Contacts() {
           <div className={styles.box}>
             <div className={styles.left}>
               <form
-                action="/"
                 className={classNames(styles.form, "form")}
                 onSubmit={handleSubmit}
               >

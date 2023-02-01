@@ -14,6 +14,7 @@ class ArticleService {
       const { data: frontmatter } = matter(file);
 
       return {
+        category: type,
         slug,
         frontmatter,
       };
@@ -28,9 +29,20 @@ class ArticleService {
     return { content, frontmatter };
   }
 
-  public async getCategrories() {
+  public async getCategories() {
     const categories = await readdir("articles");
     return categories;
+  }
+
+  public async getAll() {
+    const categories = await this.getCategories();
+    const promises = categories.map(async (category) => {
+      const articles = await this.getAllByCategory(category as ArticleType);
+      return articles.map((article) => ({ ...article, category }));
+    });
+    const articles = await Promise.all(promises);
+    const flattenedArticles = articles.flat();
+    return flattenedArticles;
   }
 }
 

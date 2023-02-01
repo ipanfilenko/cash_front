@@ -3,7 +3,6 @@ import { useEffect, useRef } from "react";
 import md from "markdown-it";
 import { useRouter } from "next/router";
 import Articles, {
-  ArticleType,
   IArticle,
   IArticlesProps,
   IFrontmatter,
@@ -51,7 +50,6 @@ export async function getStaticProps(
   const filteredArticles = articles.filter((article) => article.slug !== slug);
   return {
     props: {
-      type,
       content,
       currentArticle: { frontmatter, content },
       articles: filteredArticles,
@@ -60,12 +58,10 @@ export async function getStaticProps(
 }
 
 export default function ArticlePage({
-  type,
   currentArticle,
   articles,
 }: {
   currentArticle: { content: string; frontmatter: IFrontmatter };
-  type: ArticleType;
   articles: IArticle[];
 }) {
   const container = useRef<HTMLDivElement>(null);
@@ -97,7 +93,6 @@ export default function ArticlePage({
             />
           </div>
           <Articles
-            type={type}
             className={classNames(styles.list)}
             title="Other Articles"
             articles={articles}

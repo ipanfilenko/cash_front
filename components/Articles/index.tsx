@@ -1,12 +1,8 @@
-/* eslint-disable @next/next/no-img-element */
-import Link from "next/link";
 import classNames from "classnames";
 import React, { ReactNode } from "react";
 import Slider from "react-slick";
 import styles from "./style.module.scss";
-import Icon from "../shared/icons";
-
-export type ArticleType = "cashback" | "cricket";
+import Item from "./item";
 
 export interface IFrontmatter {
   title: string;
@@ -18,16 +14,16 @@ export interface IFrontmatter {
 export interface IArticle {
   slug: string;
   frontmatter: IFrontmatter;
+  category: string;
 }
 
 export interface IArticlesProps {
-  type: ArticleType;
   articles: IArticle[];
   title: string | ReactNode;
   className?: string;
 }
 
-function Articles({ articles, title, className, type }: IArticlesProps) {
+function Articles({ articles, title, className }: IArticlesProps) {
   const settings = {
     dots: false,
     arrows: false,
@@ -50,33 +46,7 @@ function Articles({ articles, title, className, type }: IArticlesProps) {
             key={article.frontmatter.title}
             className={classNames(styles.item)}
           >
-            <div className={classNames(styles.itemBox)}>
-              <img
-                className={classNames(styles.image)}
-                src={article.frontmatter.image}
-                alt=""
-              />
-              <Link
-                href={`/article/${type}/${article.slug}`}
-                className={classNames(styles.bottom)}
-              >
-                <span className={classNames(styles.title)}>
-                  {article.frontmatter.title}
-                </span>
-                <span className={classNames(styles.description)}>
-                  {article.frontmatter.description}
-                </span>
-                <span className={classNames(styles.link)}>
-                  <span className={classNames(styles.linkText)}>
-                    Read article
-                  </span>
-                  <Icon
-                    className={classNames(styles.arrow)}
-                    name="right-arrow"
-                  />
-                </span>
-              </Link>
-            </div>
+            <Item article={article} type={article.category} />
           </div>
         ))}
       </Slider>

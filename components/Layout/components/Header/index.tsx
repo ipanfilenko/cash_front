@@ -13,6 +13,10 @@ const navigationList = [
     path: "/",
   },
   {
+    label: "Blog",
+    path: "/article",
+  },
+  {
     label: "Contact",
     path: "/contacts",
   },
