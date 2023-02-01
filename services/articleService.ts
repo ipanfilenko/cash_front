@@ -1,10 +1,9 @@
 import matter from "gray-matter";
 import { readdir, readFile } from "node:fs/promises";
-
-import { ArticleType } from "../components/Articles";
+import { IFrontmatter } from "../components/Articles";
 
 class ArticleService {
-  public async getAllByCategory(type: ArticleType) {
+  public async getAllByCategory(type: string) {
     const files = await readdir(`articles/${type}`);
 
     const promises = files.map(async (fileName) => {
@@ -16,17 +15,17 @@ class ArticleService {
       return {
         category: type,
         slug,
-        frontmatter,
+        frontmatter: frontmatter as IFrontmatter,
       };
     });
     const articles = await Promise.all(promises);
     return articles;
   }
 
-  public async getSpecific(type: ArticleType, slug: string) {
+  public async getSpecific(type: string, slug: string) {
     const fileName = await readFile(`articles/${type}/${slug}.md`, "utf-8");
     const { content, data: frontmatter } = matter(fileName);
-    return { content, frontmatter };
+    return { content, frontmatter: frontmatter as IFrontmatter };
   }
 
   public async getCategories() {
@@ -37,7 +36,7 @@ class ArticleService {
   public async getAll() {
     const categories = await this.getCategories();
     const promises = categories.map(async (category) => {
-      const articles = await this.getAllByCategory(category as ArticleType);
+      const articles = await this.getAllByCategory(category);
       return articles.map((article) => ({ ...article, category }));
     });
     const articles = await Promise.all(promises);

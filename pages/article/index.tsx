@@ -49,8 +49,8 @@ function Blog({ articles, categories }: IBlogProps) {
             </span>
           </div>
           <div>
-            {data.map((article) => (
-              <div key={article.id}>
+            {data.map((article, index) => (
+              <div key={index}>
                 <Article article={article} type={article.category} />
               </div>
             ))}
