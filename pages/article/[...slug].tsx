@@ -87,7 +87,6 @@ export default function ArticlePage({
       <Head>
         <title>{frontmatter.title}</title>
         <meta name="description" content={frontmatter.description} />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
       </Head>
       <Layout>
         <Wrapper>

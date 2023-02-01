@@ -7,8 +7,28 @@ import Button from "../components/shared/button";
 import Wrapper from "../components/Wrapper";
 import styles from "./style.module.scss";
 import articleService from "../services/articleService";
+import Slider from "react-slick";
 
 const { NEXT_PUBLIC_MOBILE_APPLICATION_LINK = "" } = process.env;
+
+const reviews = [
+  {
+    image: "/images/reviews/1.png",
+    name: "Satish Captian",
+    comment:
+      "Ohh. Best App For Target Money. I Resived My Money Within 4 Week. Nice App. Thank you.",
+  },
+  {
+    image: "/images/reviews/2.png",
+    name: "Anupam Gulati",
+    comment: "I got my money, this is an amazing app. Go for it.",
+  },
+  {
+    image: "/images/reviews/3.jpg",
+    name: "Shivu bro",
+    comment: "Nice app",
+  },
+];
 
 export async function getStaticProps() {
   const cashbackArticles = await articleService.getAllByCategory("cashback");
@@ -28,6 +48,35 @@ export default function Home({
   cashbackArticles: IArticlesProps["articles"];
   cricketkArticles: IArticlesProps["articles"];
 }) {
+  const settings = {
+    dots: true,
+    arrows: false,
+    infinite: true,
+    speed: 1000,
+    slidesToShow: 3,
+    slidesToScroll: 3,
+    swipeToSlide: true,
+    autoplay: true,
+    autoplaySpeed: 5000,
+    responsive: [
+      {
+        breakpoint: 600,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 2,
+          initialSlide: 2,
+        },
+      },
+      {
+        breakpoint: 480,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+        },
+      },
+    ],
+  };
+
   return (
     <>
       <Head>
@@ -71,53 +120,31 @@ export default function Home({
               Our Mission
             </span>
             <span className={styles.missionText}>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-              enim ad minim veniam, quis nostrud exercitation ullamco laboris
-              nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
-              reprehenderit in voluptate velit esse cillum dolore eu fugiat
-              nulla pariatur. Excepteur sint occaecat cupidatat non proident,
-              sunt in culpa qui officia deserunt mollit anim id est laborum.
+              The mission of Octopus Browser is to empower users to effortlessly
+              explore and connect with the world wide web in a fast, secure and
+              intuitive way. Our goal is to provide users with a personalized
+              and efficient online experience that prioritizes speed, privacy,
+              and convenience. By continuously innovating and improving our
+              technology, we strive to be the go-to browser for all web users.
             </span>
           </div>
           <div className={styles.reviews}>
             <span className={classNames(styles.reviewsTitle, "title")}>
               What people are saying . . .
             </span>
-            <ul className={styles.reviewsList}>
-              <li className={styles.reviewsItem}>
-                <div className={styles.reviewsAuthor}>
-                  <Image
-                    src="/images/reviews/1.png"
-                    width={60}
-                    height={60}
-                    alt=""
-                  />
-                  <span>Joseph Fakeman</span>
+            <Slider {...settings} className={styles.reviewsList}>
+              {reviews.map((review) => (
+                <div key={review.name} className={styles.reviewsItem}>
+                  <div className={styles.reviewsAuthor}>
+                    <Image src={review.image} width={60} height={60} alt="" />
+                    <span>{review.name}</span>
+                  </div>
+                  <span className={styles.reviewsComment}>
+                    {review.comment}
+                  </span>
                 </div>
-                <span className={styles.reviewsComment}>
-                  Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                  Accusamus illum sunt aliquam aliquid quia inventore,
-                  distinctio consequatur iste aperiam expedita.
-                </span>
-              </li>
-              <li className={styles.reviewsItem}>
-                <div className={styles.reviewsAuthor}>
-                  <Image
-                    src="/images/reviews/2.png"
-                    width={60}
-                    height={60}
-                    alt=""
-                  />
-                  <span>Arthur Vandelay</span>
-                </div>
-                <span className={styles.reviewsComment}>
-                  Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                  Accusamus illum sunt aliquam aliquid quia inventore,
-                  distinctio consequatur iste aperiam expedita.
-                </span>
-              </li>
-            </ul>
+              ))}
+            </Slider>
           </div>
           <div className={styles.articles}>
             <Articles

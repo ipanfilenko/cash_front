@@ -27,6 +27,11 @@ class ArticleService {
     const { content, data: frontmatter } = matter(fileName);
     return { content, frontmatter };
   }
+
+  public async getCategrories() {
+    const categories = await readdir("articles");
+    return categories;
+  }
 }
 
 export default new ArticleService();
