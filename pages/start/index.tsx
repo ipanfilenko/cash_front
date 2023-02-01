@@ -37,7 +37,6 @@ export default function Start({
         <Shortcuts />
         <News />
         <Articles
-          type="cashback"
           title={
             <span>
               Learn more about <span className="mark">Cashback</span>
@@ -46,7 +45,6 @@ export default function Start({
           articles={cashbackArticles}
         />
         <Articles
-          type="cricket"
           title={
             <span>
               Learn more about <span className="mark">Cricket</span>

@@ -1,6 +1,6 @@
 import classNames from "classnames";
 import Head from "next/head";
-import React, { useState } from "react";
+import React from "react";
 import Layout from "../../components/Layout";
 import Button from "../../components/shared/button";
 import Wrapper from "../../components/Wrapper";

@@ -5,8 +5,8 @@ import Article from "../../components/Articles/item";
 import Layout from "../../components/Layout";
 import Wrapper from "../../components/Wrapper";
 import articleService from "../../services/articleService";
-import Breadcrumbs from "./components/Breadcrumbs";
-import useBlogState from "./hooks/useBlogState";
+import Breadcrumbs from "../../lib/articles/components/Breadcrumbs";
+import useBlogState from "../../lib/articles/hooks/useBlogState";
 import styles from "./style.module.scss";
 
 export async function getStaticProps() {

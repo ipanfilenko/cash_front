@@ -16,9 +16,9 @@ import Head from "next/head";
 import Layout from "../../components/Layout";
 
 export async function getStaticPaths() {
-  const dirs = await readdir("articles");
+  const dirs = await readdir("lib/articles/data");
   const allDirs = dirs.map(async (dirname) => {
-    const files = await readdir(`articles/${dirname}`);
+    const files = await readdir(`lib/articles/data/${dirname}`);
 
     return files.map((file) => [dirname, file.replace(".md", "")]);
   });
