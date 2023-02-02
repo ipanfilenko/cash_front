@@ -1,7 +1,7 @@
 ---
-title: 'TOP-10 Cricket players earnings'
-image: '/images/articles/cricket/thumbnail/1.jpg'
-description: 'Cricket is one of the most popular sports in India, and it is also one of the most lucrative. Many of India`s top cricket players earn large salaries, thanks to the combination of their talent on the field and their marketability off the field.'
+title: "TOP-10 Cricket players earnings"
+image: "/images/articles/cricket/thumbnail/1.jpg"
+description: "Cricket is one of the most popular sports in India, and it is also one of the most lucrative. Many of India`s top cricket players earn large salaries, thanks to the combination of their talent on the field and their marketability off the field."
 ---
 
 ![TOP-10 Cricket players earnings](/images/articles/cricket/1.jpg)
@@ -29,4 +29,11 @@ Cricket is one of the most popular sports in India, and it is also one of the mo
 9. **Jasprit Bumrah:** Jasprit Bumrah is an Indian cricketer who is considered one of the best fast bowlers in the world. He earns an estimated $1.1 million annually from his salary and endorsements.
 
 10. **Bhuvneshwar Kumar:** Bhuvneshwar Kumar is an Indian cricketer who is considered one of the best fast bowlers in the world. He earns an estimated $1 million annually from his salary and endorsements.
-It's worth noting that the above figures are estimates and could vary depending on the source of information and the time frame considered. The Indian cricket players also earn a significant portion of their income from their salary and match fees as well as from the brand endorsements and other business ventures. The above list showcases the top earners in the Indian cricket scene and highlights the popularity and marketability of these players in the country.
+    It's worth noting that the above figures are estimates and could vary depending on the source of information and the time frame considered. The Indian cricket players also earn a significant portion of their income from their salary and match fees as well as from the brand endorsements and other business ventures. The above list showcases the top earners in the Indian cricket scene and highlights the popularity and marketability of these players in the country.
+
+| Pros Of Cashback                                   | Cons Of Cashback                                                        |
+| :------------------------------------------------- | :---------------------------------------------------------------------- |
+| Every credit card has cashback associated with it. | APR (Annual Percentage Rate) increases with time.                       |
+| Absence of annual fee related to the credit card.  | Sometimes foreign transaction charges get levied on the cashback cards. |
+| The companies allow many shopping benefits.        | Many credit cards give cashback up to a predetermined limit.            |
+| Sign-up bonuses are there on every card.           | Annual Percentage Rate increases with default on credit cards.          |

@@ -14,6 +14,10 @@ class AndroidService {
   search() {
     window.CashbroInterface?.search();
   }
+
+  isDevice() {
+    return Boolean(window.CashbroInterface);
+  }
 }
 
 export default new AndroidService();

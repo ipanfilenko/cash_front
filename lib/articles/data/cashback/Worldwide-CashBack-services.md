@@ -1,7 +1,7 @@
 ---
-title: 'Worldwide CashBack services'
-image: '/images/articles/cashback/thumbnail/1.jpg'
-description: 'Cashback services are becoming increasingly popular in India as they offer customers the opportunity to earn money back on their purchases. These services are provided by a variety of companies and platforms, including digital wallets, e-commerce platforms, and payment providers.'
+title: "Worldwide CashBack services"
+image: "/images/articles/cashback/thumbnail/1.jpg"
+description: "Cashback services are becoming increasingly popular in India as they offer customers the opportunity to earn money back on their purchases. These services are provided by a variety of companies and platforms, including digital wallets, e-commerce platforms, and payment providers."
 ---
 
 ![Worldwide CashBack services](/images/articles/cashback/1.jpg)
@@ -19,5 +19,11 @@ Cashback services are becoming increasingly popular in India as they offer custo
 4. **Amazon Pay Cashback:** Amazon Pay is a digital wallet and payment service offered by Amazon India, and allows users to earn cashback on a variety of transactions, including recharges, bill payments, and online purchases. Users can earn cashback by using the Amazon Pay app to make transactions, and can then use the cashback to make future transactions or transfer it to their bank account.
 
 5. **Google Pay Cashback:** Google Pay (formerly known as Google Tez) is a digital payment service offered by Google in India, and allows users to earn cashback on a variety of transactions, including mobile recharges, bill payments, and online purchases. Users can earn cashback by using the Google Pay app to make transactions, and can then use the cashback to make future transactions or transfer it to their bank account.
+
+| Pros Of Cashback                                       | Cons Of Cashback                                                         |
+| :----------------------------------------------------- | :----------------------------------------------------------------------- |
+| Many credit card companies give zero percent APR.      | Travel rewards do not get enabled for many credit cards.                 |
+| Cashbacks don’t get devalued by credit card companies. | Interest payment for credit card balance could hamper cashback earnings. |
+| Sign-up bonuses are there on every card.               | Annual Percentage Rate increases with default on credit cards.           |
 
 These are some of the most popular cashback services in India that have been adopted by a large number of users across the country. All of these services offer a convenient and easy way to earn cashback on everyday transactions, making them a popular choice among consumers. Additionally, these services are also safe and secure, ensuring that users' personal and financial information is protected at all times.

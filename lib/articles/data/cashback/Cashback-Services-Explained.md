@@ -1,7 +1,7 @@
 ---
-title: 'Cashback Services Explained'
-image: '/images/articles/cashback/thumbnail/3.jpg'
-description: 'Cashback services are a type of rewards program that allows customers to receive a percentage of their purchase amount back in the form of cash or credit. These services are typically offered by credit card companies, retailers, or online marketplaces as an incentive for customers to make purchases.'
+title: "Cashback Services Explained"
+image: "/images/articles/cashback/thumbnail/3.jpg"
+description: "Cashback services are a type of rewards program that allows customers to receive a percentage of their purchase amount back in the form of cash or credit. These services are typically offered by credit card companies, retailers, or online marketplaces as an incentive for customers to make purchases."
 ---
 
 ![Cashback Services Explained](/images/articles/cashback/3.jpg)
@@ -11,6 +11,12 @@ description: 'Cashback services are a type of rewards program that allows custom
 Cashback services are a type of rewards program that allows customers to receive a percentage of their purchase amount back in the form of cash or credit. These services are typically offered by credit card companies, retailers, or online marketplaces as an incentive for customers to make purchases.
 
 In India, cashback services are becoming increasingly popular among consumers. Many major credit card companies, such as HDFC, SBI, and ICICI, offer cashback rewards for purchases made with their cards. Retailers such as Flipkart and Amazon also offer cashback rewards for purchases made on their platforms. In addition, there are several standalone cashback apps and websites that allow customers to earn cashback on purchases made at a variety of merchants.
+
+| Pros Of Cashback                                       | Cons Of Cashback                                                         |
+| :----------------------------------------------------- | :----------------------------------------------------------------------- |
+| Many credit card companies give zero percent APR.      | Travel rewards do not get enabled for many credit cards.                 |
+| Cashbacks don’t get devalued by credit card companies. | Interest payment for credit card balance could hamper cashback earnings. |
+| Sign-up bonuses are there on every card.               | Annual Percentage Rate increases with default on credit cards.           |
 
 Customers can typically earn cashback on a wide range of products and services, including groceries, clothing, electronics, travel, and more. The amount of cashback earned on a purchase can vary depending on the retailer or credit card company offering the rewards program, and may also be influenced by factors such as the purchase amount, the customer's loyalty status, or the type of product or service being purchased.
 

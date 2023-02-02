@@ -1,5 +1,5 @@
 import { readdir } from "node:fs/promises";
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import md from "markdown-it";
 import { useRouter } from "next/router";
 import Articles, { IArticlesProps } from "../../components/Articles";
@@ -12,6 +12,7 @@ import Wrapper from "../../components/Wrapper";
 import Head from "next/head";
 import Layout from "../../components/Layout";
 import Icon from "../../components/shared/icons";
+import androidService from "../../services/androidService";
 import styles from "./style.module.scss";
 
 dayjs.extend(relativeTime);
@@ -66,6 +67,7 @@ export default function ArticlePage({
   articles,
 }: Awaited<ReturnType<typeof getStaticProps>>["props"]) {
   const container = useRef<HTMLDivElement>(null);
+  const [isDevice, setIsDevice] = useState(false);
 
   const router = useRouter();
   const pathname = router.asPath;
@@ -79,7 +81,14 @@ export default function ArticlePage({
     });
   }, [pathname]);
 
+  useEffect(() => {
+    const isMovile = androidService.isDevice();
+    setIsDevice(isMovile);
+  }, []);
+
   const diffTime = dayjs(updatedTime).fromNow();
+
+  const mainPagePath = isDevice ? "/start" : "/";
   return (
     <>
       <Head>
@@ -108,7 +117,11 @@ export default function ArticlePage({
             title="Other Articles"
             articles={articles}
           />
-          <Button as="link" href="/" className={classNames(styles.button)}>
+          <Button
+            as="link"
+            href={mainPagePath}
+            className={classNames(styles.button)}
+          >
             Main page
           </Button>
         </Wrapper>

@@ -1,7 +1,7 @@
 ---
-title: 'How to earn through Cashback'
-image: '/images/articles/cashback/thumbnail/4.jpg'
-description: 'Cash back rewards are a popular way for Indian consumers to earn money on their everyday purchases. These rewards can be earned through a variety of different cash back services and apps, each with their own unique features and benefits.'
+title: "How to earn through Cashback"
+image: "/images/articles/cashback/thumbnail/4.jpg"
+description: "Cash back rewards are a popular way for Indian consumers to earn money on their everyday purchases. These rewards can be earned through a variety of different cash back services and apps, each with their own unique features and benefits."
 ---
 
 ![How to earn through Cashback](/images/articles/cashback/4.jpg)
@@ -13,6 +13,12 @@ Cash back rewards are a popular way for Indian consumers to earn money on their 
 One of the most popular cash back services in India is CashKaro. CashKaro offers cash back on purchases made through its online shopping portal, which features over 1,500 retailers. To earn cash back through CashKaro, simply start your online shopping at the CashKaro website and then click through to the retailer's website to make your purchase. CashKaro will then send you a cash back payment, which can be redeemed as a bank transfer or as gift vouchers.
 
 Another popular cash back service in India is MagicPin. MagicPin is a cash back app that offers cashback on purchases made at local stores. Users can discover the best deals and offers at nearby stores, and can earn cashback on the purchases they make. The cashback earned can be used to make purchases on MagicPin, or transferred to a bank account.
+
+| Pros Of Cashback                                       | Cons Of Cashback                                                         |
+| :----------------------------------------------------- | :----------------------------------------------------------------------- |
+| Many credit card companies give zero percent APR.      | Travel rewards do not get enabled for many credit cards.                 |
+| Cashbacks don’t get devalued by credit card companies. | Interest payment for credit card balance could hamper cashback earnings. |
+| Sign-up bonuses are there on every card.               | Annual Percentage Rate increases with default on credit cards.           |
 
 Gopaisa is also a popular cash back app that allows you to earn cash back on your online purchases. To use Gopaisa, simply download the app, browse through available offers, and then click through to the retailer's website to make your purchase. Gopaisa will then add cash back rewards to your account.
 
