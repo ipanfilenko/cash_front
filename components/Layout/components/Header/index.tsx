@@ -24,6 +24,10 @@ const navigationList = [
     label: "About",
     path: "/about",
   },
+  {
+    label: "FAQ",
+    path: "/faq",
+  },
 ];
 
 function Header() {
