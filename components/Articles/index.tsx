@@ -15,6 +15,7 @@ export interface IArticle {
   slug: string;
   frontmatter: IFrontmatter;
   category: string;
+  updatedTime: number;
 }
 
 export interface IArticlesProps {

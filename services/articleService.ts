@@ -1,31 +1,58 @@
 import matter from "gray-matter";
-import { readdir, readFile } from "node:fs/promises";
-import { IFrontmatter } from "../components/Articles";
+import { readdir, readFile, stat } from "node:fs/promises";
+import dayjs from "dayjs";
+import { IArticle, IFrontmatter } from "../components/Articles";
+
+const fileDir = "lib/articles/data";
+
+const sortArticles = (articles: IArticle[]) => {
+  const result = articles.sort((a, b) => {
+    const timeA = +dayjs(a.updatedTime);
+    const timeB = +dayjs(b.updatedTime);
+
+    return timeB - timeA;
+  });
+
+  return result;
+};
 
 class ArticleService {
   public async getAllByCategory(type: string) {
-    const files = await readdir(`lib/articles/data/${type}`);
+    const files = await readdir(`${fileDir}/${type}`);
 
     const promises = files.map(async (fileName) => {
       const slug = fileName.replace(".md", "");
-      const file = await readFile(`lib/articles/data/${type}/${fileName}`, "utf-8");
+      const filePath = `${fileDir}/${type}/${fileName}`;
+
+      const file = await readFile(filePath, "utf-8");
+      const fileStat = await stat(filePath);
 
       const { data: frontmatter } = matter(file);
 
       return {
         category: type,
         slug,
+        updatedTime: fileStat.ctimeMs,
         frontmatter: frontmatter as IFrontmatter,
       };
     });
     const articles = await Promise.all(promises);
-    return articles;
+    const sortedArticles = sortArticles(articles);
+    return sortedArticles;
   }
 
   public async getSpecific(type: string, slug: string) {
-    const fileName = await readFile(`lib/articles/data/${type}/${slug}.md`, "utf-8");
+    const filePath = `${fileDir}/${type}/${slug}`;
+
+    const fileName = await readFile(`${filePath}.md`, "utf-8");
+    const fileStat = await stat(`${filePath}.md`);
+
     const { content, data: frontmatter } = matter(fileName);
-    return { content, frontmatter: frontmatter as IFrontmatter };
+    return {
+      content,
+      updatedTime: fileStat.ctimeMs,
+      frontmatter: frontmatter as IFrontmatter,
+    };
   }
 
   public async getCategories() {
@@ -41,7 +68,8 @@ class ArticleService {
     });
     const articles = await Promise.all(promises);
     const flattenedArticles = articles.flat();
-    return flattenedArticles;
+    const sortedArticles = sortArticles(flattenedArticles);
+    return sortedArticles;
   }
 }
 

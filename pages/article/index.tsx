@@ -5,7 +5,7 @@ import Article from "../../components/Articles/item";
 import Layout from "../../components/Layout";
 import Wrapper from "../../components/Wrapper";
 import articleService from "../../services/articleService";
-import Breadcrumbs from "../../lib/articles/components/Breadcrumbs";
+import Navigation from "../../lib/articles/components/Navigation";
 import useBlogState from "../../lib/articles/hooks/useBlogState";
 import styles from "./style.module.scss";
 
@@ -36,11 +36,6 @@ function Blog({ articles, categories }: IBlogProps) {
       </Head>
       <Layout>
         <Wrapper>
-          <Breadcrumbs
-            setCategory={setCurrentCategory}
-            currentCategory={currentCategory}
-            categories={categories}
-          />
           <div className={classNames("static-content", styles.blog)}>
             <h1 className={classNames(styles.title, "page-title")}>Blog</h1>
             <span className={classNames(styles.subtitle, "page-subtitle")}>
@@ -48,9 +43,14 @@ function Blog({ articles, categories }: IBlogProps) {
               promotions
             </span>
           </div>
-          <div>
+          <Navigation
+            setCategory={setCurrentCategory}
+            currentCategory={currentCategory}
+            categories={categories}
+          />
+          <div className={styles.blogList}>
             {data.map((article, index) => (
-              <div key={index}>
+              <div key={index} className={styles.blogItem}>
                 <Article article={article} type={article.category} />
               </div>
             ))}

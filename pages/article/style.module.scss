@@ -12,3 +12,44 @@
 .button {
   margin-bottom: 30px;
 }
+
+.blog {
+
+}
+
+.blogList {
+  margin: 0 -15px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.blogItem {
+  width: 50%;
+  padding: 0 15px 15px;
+}
+
+.author {
+  display: flex;
+  align-items: center;
+  padding: 0 15px 15px;
+}
+
+.authorIcon {
+  width: 32px;
+  height: 32px;
+}
+
+.authorBox {
+  padding-left: 15px;
+}
+
+.authorName {
+  font-size: 14px;
+  display: block;
+  padding-bottom: 5px;
+}
+
+.authorTime {
+  display: block;
+  font-size: 14px;
+}

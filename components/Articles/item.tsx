@@ -2,9 +2,13 @@
 import classNames from "classnames";
 import Link from "next/link";
 import React from "react";
+import dayjs from "dayjs";
+import relativeTime from "dayjs/plugin/relativeTime";
 import { IArticle } from ".";
 import Icon from "../shared/icons";
 import styles from "./style.module.scss";
+
+dayjs.extend(relativeTime);
 
 interface IItemProps {
   article: IArticle;
@@ -12,6 +16,7 @@ interface IItemProps {
 }
 
 function Item({ article, type }: IItemProps) {
+  const updatedTime = dayjs(article.updatedTime).fromNow();
   return (
     <div className={classNames(styles.itemBox)}>
       <img
@@ -19,6 +24,15 @@ function Item({ article, type }: IItemProps) {
         src={article.frontmatter.image}
         alt=""
       />
+      <div className={classNames(styles.author)}>
+        <Icon className={classNames(styles.authorIcon)} name="admin" />
+        <div className={classNames(styles.authorBox)}>
+          <span className={classNames(styles.authorName)}>Admin</span>
+          <span className={classNames(styles.authorTime)}>
+            {dayjs(article.updatedTime).format("DD/MM/YYYY")} - {updatedTime}
+          </span>
+        </div>
+      </div>
       <Link
         href={`/article/${type}/${article.slug}`}
         className={classNames(styles.bottom)}
