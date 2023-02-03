@@ -11,8 +11,6 @@ import Action from "./components/Action";
 
 dayjs.extend(relativeTime);
 
-const NEXT_PUBLIC_ADSENSE_KEY = process.env.NEXT_PUBLIC_ADSENSE_KEY;
-
 function News() {
   const {
     isLoading,
@@ -30,7 +28,7 @@ function News() {
   return (
     <div className={classNames(styles.news)}>
       <Adsense
-        client={`${NEXT_PUBLIC_ADSENSE_KEY}`}
+        client={`${process.env.NEXT_PUBLIC_ADSENSE_KEY}`}
         slot="7466683631"
         format="auto"
         responsive="true"
@@ -60,7 +58,7 @@ function News() {
                       style={{ display: "block", textAlign: "center" }}
                       layout="in-article"
                       format="fluid"
-                      client={`${NEXT_PUBLIC_ADSENSE_KEY}`}
+                      client={`${process.env.NEXT_PUBLIC_ADSENSE_KEY}`}
                       slot="2713050408"
                     />
                   </div>

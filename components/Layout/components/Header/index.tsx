@@ -5,8 +5,6 @@ import styles from "./style.module.scss";
 import Image from "next/image";
 import Button from "../../../shared/button";
 
-const { NEXT_PUBLIC_MOBILE_APPLICATION_LINK = "" } = process.env;
-
 const navigationList = [
   {
     label: "Home",
@@ -50,7 +48,7 @@ function Header() {
           <Button
             as="link"
             target="_blank"
-            href={NEXT_PUBLIC_MOBILE_APPLICATION_LINK}
+            href={process.env.NEXT_PUBLIC_MOBILE_APPLICATION_LINK}
             className={styles.button}
           >
             Get Started

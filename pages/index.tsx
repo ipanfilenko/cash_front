@@ -9,8 +9,6 @@ import styles from "./style.module.scss";
 import articleService from "../services/articleService";
 import Slider from "react-slick";
 
-const { NEXT_PUBLIC_MOBILE_APPLICATION_LINK = "" } = process.env;
-
 const reviews = [
   {
     image: "/images/reviews/1.png",
@@ -108,7 +106,7 @@ export default function Home({
               <Button
                 as="link"
                 target="_blank"
-                href={NEXT_PUBLIC_MOBILE_APPLICATION_LINK}
+                href={process.env.NEXT_PUBLIC_MOBILE_APPLICATION_LINK}
                 className={styles.mobileButton}
               >
                 Get Started
