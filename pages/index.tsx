@@ -100,8 +100,11 @@ export default function Home({
             <div className={styles.mobileRight}>
               <h1 className={styles.mobileTitle}>Octopus - CashBack Browser</h1>
               <span className={styles.mobileSubtitle}>
-                Octopus Browser is a great source of extra income 💸MONEY💸 just
-                by surfing the internet, shopping online and doing some tasks.
+                Octopus Browser is a great source for earning extra 💸MONEY💸
+                just surfing the internet, shopping online and doing ordinary,
+                everyday tasks. Octopus Browser is fast and safe, we offer the
+                same primary features of other browsers like Downloading, News
+                Browsing, and Video Watching
               </span>
               <Button
                 as="link"
