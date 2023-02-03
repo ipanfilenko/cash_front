@@ -25,7 +25,9 @@ function Item({ article, type }: IItemProps) {
         alt=""
       />
       <div className={classNames(styles.author)}>
-        <Icon className={classNames(styles.authorIcon)} name="admin" />
+        <div className={classNames(styles.authorIcon)}>
+          <Icon name="logo" />
+        </div>
         <div className={classNames(styles.authorBox)}>
           <span className={classNames(styles.authorName)}>Admin</span>
           <span className={classNames(styles.authorTime)}>
