@@ -104,7 +104,7 @@ export default function Home({
                 just surfing the internet, shopping online and doing ordinary,
                 everyday tasks. Octopus Browser is fast and safe, we offer the
                 same primary features of other browsers like Downloading, News
-                Browsing, and Video Watching
+                Browsing, and Video Watching.
               </span>
               <Button
                 as="link"
