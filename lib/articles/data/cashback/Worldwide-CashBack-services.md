@@ -1,6 +1,9 @@
 ---
 title: "Worldwide CashBack services"
-image: "/images/articles/cashback/thumbnail/1.jpg"
+author: "Lily Bryant"
+authorIcon: "/images/about-us/staff-6.jpg"
+createdAt: "02/08/2023"
+image: "/images/articles/cashback/1.jpg"
 description: "Cashback services are becoming increasingly popular in India as they offer customers the opportunity to earn money back on their purchases. These services are provided by a variety of companies and platforms, including digital wallets, e-commerce platforms, and payment providers."
 ---
 
@@ -25,5 +28,7 @@ Cashback services are becoming increasingly popular in India as they offer custo
 | Many credit card companies give zero percent APR.      | Travel rewards do not get enabled for many credit cards.                 |
 | Cashbacks don’t get devalued by credit card companies. | Interest payment for credit card balance could hamper cashback earnings. |
 | Sign-up bonuses are there on every card.               | Annual Percentage Rate increases with default on credit cards.           |
+
+[![Google Play](/images/google-play.png)](https://play.google.com/store/apps/details?id=space.cashbro.browser&pli=1)
 
 These are some of the most popular cashback services in India that have been adopted by a large number of users across the country. All of these services offer a convenient and easy way to earn cashback on everyday transactions, making them a popular choice among consumers. Additionally, these services are also safe and secure, ensuring that users' personal and financial information is protected at all times.

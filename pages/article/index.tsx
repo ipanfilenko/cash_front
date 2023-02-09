@@ -11,6 +11,7 @@ import styles from "./style.module.scss";
 
 export async function getStaticProps() {
   const articles = await articleService.getAll();
+
   const categories = await articleService.getCategories();
   return {
     props: {

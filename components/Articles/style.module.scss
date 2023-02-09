@@ -112,7 +112,8 @@
   margin-bottom: 20px;
   color: $textColor;
   opacity: 0.5;
-  font-size: 16px;
+  font-size: 0.9rem;
+  line-height: 1.5;
 }
 
 .author {
@@ -124,10 +125,9 @@
 .authorIcon {
   width: 32px;
   height: 32px;
-  svg {
-    display: block;
-    fill: $shortcutText;
-  }
+  border-radius: 50%;
+  object-fit: cover;
+  margin-top: 5px;
 }
 
 .authorBox {

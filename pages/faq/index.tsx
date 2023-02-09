@@ -25,9 +25,9 @@ function Faq() {
           <h1 className={classNames("page-title")}>
             Have Questions?
           </h1>
-          <Accordion>
+          <Accordion allowMultipleExpanded preExpanded={faqQuestions.map((_, index) => index)}>
             {faqQuestions.map((question, index) => (
-              <AccordionItem key={index}>
+              <AccordionItem key={index} uuid={index}>
                 <AccordionItemHeading>
                   <AccordionItemButton>{question.title}</AccordionItemButton>
                 </AccordionItemHeading>

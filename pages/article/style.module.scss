@@ -13,10 +13,6 @@
   margin-bottom: 30px;
 }
 
-.blog {
-
-}
-
 .blogList {
   margin: 0 -15px;
   display: flex;
@@ -37,12 +33,14 @@
 .authorIcon {
   width: 32px;
   height: 32px;
+  border-radius: 50%;
+  object-fit: cover;
+
   svg {
     display: block;
     fill: $shortcutText;
   }
 }
-
 
 .authorBox {
   padding-left: 15px;
@@ -57,4 +55,8 @@
 .authorTime {
   display: block;
   font-size: 14px;
+}
+
+.static-content a.image-container:after {
+  background: none;
 }

@@ -6,6 +6,9 @@ import Item from "./item";
 
 export interface IFrontmatter {
   title: string;
+  author: string;
+  authorIcon: string;
+  createdAt: string;
   image: string;
   description: string;
   slug: string;

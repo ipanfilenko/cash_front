@@ -10,18 +10,22 @@ const team = [
   {
     image: `/images/about-us/staff-1.jpg.webp`,
     name: "Roger Scott",
+    position: "CEO & Owner"
   },
   {
     image: `/images/about-us/staff-2.jpg.webp`,
-    name: "Roger Scott",
+    name: "Harry Phelps",
+    position: "Software Developer"
   },
   {
     image: `/images/about-us/staff-3.jpg.webp`,
-    name: "Roger Scott",
+    name: "David Owen",
+    position: "Finance"
   },
   {
-    image: `/images/about-us/staff-4.jpg.webp`,
-    name: "Roger Scott",
+    image: `/images/about-us/staff-6.jpg`,
+    name: "Lily Bryant",
+    position: "HR"
   },
 ];
 
@@ -70,7 +74,10 @@ function About() {
                     <div className={styles.teamImage}>
                       <img src={item.image} alt="" />
                     </div>
-                    <span className={styles.teamName}>{item.name}</span>
+                    <div className={styles.teamNameWrapper}>
+                      <div className={styles.teamName}>{item.name}</div>
+                      <div className={styles.teamNamePosition}>{item.position}</div>
+                    </div>
                   </li>
                 );
               })}

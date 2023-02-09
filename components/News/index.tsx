@@ -27,14 +27,17 @@ function News() {
 
   return (
     <div className={classNames(styles.news)}>
-      <Adsense
-        client={`${process.env.NEXT_PUBLIC_ADSENSE_KEY}`}
-        slot="7466683631"
-        format="auto"
-        responsive="true"
-        style={{ display: "block" }}
-        key="adsense-banner"
-      />
+      <div>
+        <Adsense
+          client={`${process.env.NEXT_PUBLIC_ADSENSE_KEY}`}
+          slot="7466683631"
+          format="auto"
+          responsive="true"
+          style={{ display: "block" }}
+          key="adsense-banner"
+        />
+      </div>
+
 
       <ul className={styles.list} key="list">
         {newsList.map((news, index) => {
@@ -53,7 +56,7 @@ function News() {
             <React.Fragment key={id + websiteTitle}>
               {index === 1 && (
                 <li key="adsense-news" className={styles.item}>
-                  <div className={styles.itemBox}>
+                  <div className={styles.itemBox} style={{ display: "none"}}>
                     <Adsense
                       style={{ display: "block", textAlign: "center" }}
                       layout="in-article"
@@ -79,6 +82,7 @@ function News() {
                         alt=""
                         width={Number(mediaThumbnail.width)}
                         height={Number(mediaThumbnail.height)}
+                        priority
                       />
                     )}
                   </div>
@@ -90,6 +94,7 @@ function News() {
                         alt=""
                         width={16}
                         height={8}
+                        priority
                       />
                       <span className={classNames(styles.siteTitle)}>
                         {title} - {updatedTime}

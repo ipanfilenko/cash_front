@@ -29,37 +29,40 @@
   padding: 0 0 35px;
   margin: 0;
   text-align: center;
-  line-height: 25px;
+  line-height: 1.5;
 }
 
 .static-content {
   font-family: $font;
   color: $shortcutText;
+
   img {
     display: block;
-    max-width: 100%;
+    object-fit: cover;
+    width: 100%;
+    max-height: 400px;
     margin: 0 auto;
-    max-height: 300px;
 
     & p {
       display: block;
     }
   }
+
   h1 {
-    font-size: 20px;
-    line-height: 25px;
+    line-height: 1.5;
     margin: 0;
     padding-bottom: 20px;
   }
+
   h2 {
-    font-size: 18px;
-    line-height: 25px;
+    line-height: 1.5;
     margin: 0;
     padding-bottom: 20px;
   }
+
   p {
-    font-size: 16px;
-    line-height: 28px;
+    color: $textColor;
+    line-height: 1.5;
     margin: 0;
     padding-bottom: 30px;
   }
@@ -68,26 +71,23 @@
     margin: 0;
     padding: 0 0 30px 15px;
   }
+
+  a.image-container {
+    max-width: 300px;
+    margin-bottom: 0;
+
+    &:after {
+      background: none;
+    }
+  }
+
   .image-container {
     padding: 0;
     position: relative;
     border-radius: 20px;
     overflow: hidden;
-    display: table;
+    display: block;
     margin: 0 auto 30px;
-    &:after {
-      content: "";
-      position: absolute;
-      top: 0;
-      bottom: 0;
-      left: 0;
-      right: 0;
-      background: linear-gradient(
-        180deg,
-        rgba(254, 234, 59, 0) 30%,
-        #feea3b 116.87%
-      );
-    }
   }
 
   table {
@@ -95,10 +95,12 @@
     font-family: $font;
     width: 100%;
     margin-bottom: 30px;
+
     th,
     td {
       padding: 15px;
     }
+
     th {
       background-color: #54585d;
       color: #ffffff;
@@ -106,14 +108,17 @@
       font-size: 16px;
       border: 1px solid #54585d;
     }
+
     td {
       color: #636363;
       border: 1px solid #dddfe1;
       font-size: 16px;
     }
+
     tr {
       background-color: #f9fafb;
     }
+
     tr:nth-child(odd) {
       background-color: #ffffff;
     }

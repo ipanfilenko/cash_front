@@ -1,9 +1,12 @@
 import React from "react";
 import Link from "next/link";
-import Wrapper from "../../../Wrapper";
-import styles from "./style.module.scss";
 import Image from "next/image";
+
+import styles from "./style.module.scss";
+
+import Wrapper from "../../../Wrapper";
 import Button from "../../../shared/button";
+import GooglePlayButton from "../../../shared/GooglePlayButton";
 
 const navigationList = [
   {
@@ -13,6 +16,10 @@ const navigationList = [
   {
     label: "Blog",
     path: "/article",
+  },
+  {
+    label: "Mission",
+    path: "/mission",
   },
   {
     label: "Contact",
@@ -33,26 +40,27 @@ function Header() {
     <div className={styles.header}>
       <Wrapper className={styles.wrapper}>
         <div className={styles.box}>
-          <div className={styles.logo}>
-            <Image alt="logo" src="/logo.svg" width={64} height={62} />
-          </div>
+            <Button
+              as="link"
+              href={'/'}
+              className={styles.logoWrapper}
+            >
+              <div className={styles.logo}>
+                <Image alt="Octopus Browser" src="/logo.svg" width={64} height={62} priority />
+                <div>Octopus Browser</div>
+              </div>
+            </Button>
+
           <ul className={styles.nav}>
-            {navigationList.map((item) => {
-              return (
+            {navigationList.map((item) => (
                 <li key={item.label} className={styles.navItem}>
                   <Link href={item.path}>{item.label}</Link>
                 </li>
-              );
-            })}
+              )
+            )}
           </ul>
-          <Button
-            as="link"
-            target="_blank"
-            href={process.env.NEXT_PUBLIC_MOBILE_APPLICATION_LINK}
-            className={styles.button}
-          >
-            Get Started
-          </Button>
+
+          <GooglePlayButton />
         </div>
       </Wrapper>
     </div>

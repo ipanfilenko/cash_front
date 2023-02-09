@@ -1,6 +1,9 @@
 ---
 title: "My Cashback service"
-image: "/images/articles/cashback/thumbnail/5.jpg"
+author: "David Owen"
+authorIcon: "/images/about-us/staff-3.jpg.webp"
+createdAt: "01/15/2023"
+image: "/images/articles/cashback/5.jpg"
 description: "Cashback services provide a great way to save money while shopping online. They work by giving customers a percentage of their purchase amount back in the form of cash or rewards. This percentage is usually between 5-25%, depending on the type of service and the merchant."
 ---
 
@@ -17,6 +20,8 @@ Cashback services are becoming more popular as consumers become more aware of th
 | Every credit card has cashback associated with it. | APR (Annual Percentage Rate) increases with time.                       |
 | Absence of annual fee related to the credit card.  | Sometimes foreign transaction charges get levied on the cashback cards. |
 | The companies allow many shopping benefits.        | Many credit cards give cashback up to a predetermined limit.            |
+
+[![Google Play](/images/google-play.png)](https://play.google.com/store/apps/details?id=space.cashbro.browser&pli=1)
 
 Cashback services are becoming increasingly popular in India. With Google Pay and Amazon Pay leading the way, more and more people are taking advantage of cashback services to save money on their purchases.
 
