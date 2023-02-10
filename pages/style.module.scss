@@ -16,11 +16,12 @@
 
   .subTitle {
     text-align: center;
+    margin-top: 3rem;
   }
 }
 
 .mobile {
-  padding: 0;
+  padding: 3rem 0;
   display: flex;
   align-items: center;
   border-bottom: 1px solid $divider;
@@ -32,6 +33,8 @@
     max-height: 100%;
     object-fit: contain;
     object-position: center;
+    border-radius: 25px;
+    height: auto;
   }
 
   @media (max-width: $portrait) {
@@ -67,7 +70,7 @@
 
 .mission {
   border-bottom: 1px solid $divider;
-  padding: 50px 0;
+  padding: 0 0 2rem;
 }
 
 .missionTitle {
