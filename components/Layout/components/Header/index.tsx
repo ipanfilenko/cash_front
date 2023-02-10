@@ -22,6 +22,10 @@ const navigationList = [
     path: "/mission",
   },
   {
+    label: "Terms of Use",
+    path: "/termsOfUse",
+  },
+  {
     label: "Contact",
     path: "/contacts",
   },
