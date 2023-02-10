@@ -8,6 +8,7 @@ const nextConfig = {
         hostname: 'e3.365dm.com',
       },
     ],
+    unoptimized: true
   },
   webpack: (config) => {
     config.resolve.fallback = { fs: false };
