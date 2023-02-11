@@ -7,7 +7,11 @@
 
   .titleWrapper {
     text-align: center;
-    margin: 1rem 0 0;
+    margin: 5rem 0 5rem;
+
+    @media (max-width: $portrait) {
+      margin: 3rem 0 3rem;
+    }
 
     .pageTitle {
       margin: 1rem 0;
@@ -44,7 +48,6 @@
 
     img {
       max-width: 100%;
-      max-height: 500px;
       margin: 0 auto 30px;
     }
   }
@@ -104,6 +107,7 @@
 
 .reviewsItem {
   padding: 0 15px 15px;
+
   @media (max-width: $portrait) {
     width: 100%;
   }
@@ -152,6 +156,10 @@
   .advantagesItem {
     flex: 1;
     padding: 0 0.5rem;
+
+    @media (max-width: $portrait) {
+      padding: 1rem 0.5rem;
+    }
 
     & > div {
       font-size: 0.9rem;

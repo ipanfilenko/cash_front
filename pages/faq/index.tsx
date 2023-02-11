@@ -31,7 +31,9 @@ function Faq() {
                 <AccordionItemHeading>
                   <AccordionItemButton>{question.title}</AccordionItemButton>
                 </AccordionItemHeading>
-                <AccordionItemPanel>{question.message}</AccordionItemPanel>
+                <AccordionItemPanel>
+                  <div dangerouslySetInnerHTML={{ __html: question.message }} />
+                </AccordionItemPanel>
               </AccordionItem>
             ))}
           </Accordion>
