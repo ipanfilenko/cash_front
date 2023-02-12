@@ -44,13 +44,13 @@ function Home({ cashbackArticles }: { cashbackArticles: IArticlesProps["articles
             <div className={styles.advantagesItem}>
               <Image
                 src="/images/advantages/free-app.png"
-                alt="Free android app"
+                alt="Free and handy Android app"
                 width="80"
                 height="80"
                 priority
               />
               <div>
-                Free android app 
+              Free and handy Android app 
               </div>
             </div>
 
@@ -133,8 +133,8 @@ function Home({ cashbackArticles }: { cashbackArticles: IArticlesProps["articles
 
           <div className={styles.mission}>
           <h2 className={styles.subTitle}>How it works</h2>
-          <div className={styles.advantages}>
-            <div className={styles.advantagesItem}>
+          <div className={styles.howItWorks}>
+            <div className={styles.howItWorksItem}>
               <Image
                 src="/images/advantages/download.png"
                 alt="Mobile application"
@@ -148,7 +148,7 @@ function Home({ cashbackArticles }: { cashbackArticles: IArticlesProps["articles
               </div>
             </div>
 
-            <div className={styles.advantagesItem}>
+            <div className={styles.howItWorksItem}>
               <Image
                 src="/images/advantages/surfing.png"
                 alt="Surfing"
@@ -162,7 +162,7 @@ function Home({ cashbackArticles }: { cashbackArticles: IArticlesProps["articles
               </div>
             </div>
 
-            <div className={styles.advantagesItem}>
+            <div className={styles.howItWorksItem}>
               <Image
                 src="/images/advantages/money.png"
                 alt="Earn money"

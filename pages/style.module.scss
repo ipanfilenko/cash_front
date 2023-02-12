@@ -155,6 +155,31 @@
 
   .advantagesItem {
     flex: 1;
+    padding: 0 1.5rem;
+
+    @media (max-width: $portrait) {
+      padding: 1rem 0.5rem;
+    }
+
+    & > div {
+      font-size: 1.2rem;
+      padding-top: 1rem;
+    }
+  }
+}
+
+.howItWorks {
+  display: flex;
+  justify-content: space-evenly;
+  text-align: center;
+  padding: 1rem 0;
+
+  @media (max-width: $portrait) {
+    flex-direction: column;
+  }
+
+  .howItWorksItem {
+    flex: 1;
     padding: 0 0.5rem;
 
     @media (max-width: $portrait) {
