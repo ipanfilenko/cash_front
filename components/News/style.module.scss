@@ -2,19 +2,6 @@
 
 .news {
   padding-bottom: 25px;
-  :global {
-    ins.adsbygoogle {
-      height: 0 !important;
-    }
-
-    ins.adsbygoogle[data-ad-status="filled"] {
-      height: inherit !important;
-    }
-
-    ins.adsbygoogle[data-ad-status="unfilled"] {
-      display: none !important;
-    }
-  }
 }
 
 .list {

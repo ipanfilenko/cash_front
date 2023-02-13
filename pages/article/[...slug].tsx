@@ -2,12 +2,12 @@ import { readdir } from "node:fs/promises";
 import { useEffect, useRef, useState } from "react";
 import md from "markdown-it";
 import { useRouter } from "next/router";
-
 import classNames from "classnames";
 import dayjs from "dayjs";
 import relativeTime from "dayjs/plugin/relativeTime";
 import Image from "next/image";
 import Head from "next/head";
+import { Adsense } from "@ctrl/react-adsense";
 
 import articleService from "../../services/articleService";
 import Button from "../../components/shared/button";
@@ -101,6 +101,16 @@ export default function ArticlePage({
       </Head>
       <Layout>
         <Wrapper>
+          <div className={styles.adsenseWrapper}>
+              <Adsense
+                style={{ display: "block", textAlign: "center" }}
+                layout="in-article"
+                format="fluid"
+                client={`${process.env.NEXT_PUBLIC_ADSENSE_KEY}`}
+                slot="2713050408"
+              />
+          </div>
+
           <div className={classNames(styles.author)}>
             <div className={classNames(styles.authorIcon)}>
             {
@@ -119,10 +129,11 @@ export default function ArticlePage({
             <div className={classNames(styles.authorBox)}>
               <span className={classNames(styles.authorName)}>{frontmatter.author || 'Admin'}</span>
               <span className={classNames(styles.authorTime)}>
-              {dayjs(frontmatter.createdAt).format("DD/MM/YYYY")} - {diffTime}
-          </span>
+                {dayjs(frontmatter.createdAt).format("DD/MM/YYYY")} - {diffTime}
+              </span>
             </div>
           </div>
+
           <div className={classNames("static-content", styles.content)}>
             <div
               ref={container}

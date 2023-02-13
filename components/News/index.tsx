@@ -6,11 +6,11 @@ import classNames from "classnames";
 import dayjs from "dayjs";
 import relativeTime from "dayjs/plugin/relativeTime";
 
-import { Adsense } from "@ctrl/react-adsense";
 import Action from "./components/Action";
 
 dayjs.extend(relativeTime);
 
+// news on /start page
 function News() {
   const {
     isLoading,
@@ -27,18 +27,6 @@ function News() {
 
   return (
     <div className={classNames(styles.news)}>
-      <div>
-        <Adsense
-          client={`${process.env.NEXT_PUBLIC_ADSENSE_KEY}`}
-          slot="7466683631"
-          format="auto"
-          responsive="true"
-          style={{ display: "block" }}
-          key="adsense-banner"
-        />
-      </div>
-
-
       <ul className={styles.list} key="list">
         {newsList.map((news, index) => {
           const {
@@ -54,19 +42,6 @@ function News() {
 
           return (
             <React.Fragment key={id + websiteTitle}>
-              {index === 1 && (
-                <li key="adsense-news" className={styles.item}>
-                  <div className={styles.itemBox} style={{ display: "none"}}>
-                    <Adsense
-                      style={{ display: "block", textAlign: "center" }}
-                      layout="in-article"
-                      format="fluid"
-                      client={`${process.env.NEXT_PUBLIC_ADSENSE_KEY}`}
-                      slot="2713050408"
-                    />
-                  </div>
-                </li>
-              )}
               <li className={styles.item} key={id + websiteTitle}>
                 <div className={styles.itemBox}>
                   <div

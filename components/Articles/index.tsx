@@ -1,6 +1,7 @@
 import classNames from "classnames";
 import React, { ReactNode } from "react";
 import Slider from "react-slick";
+
 import styles from "./style.module.scss";
 import Item from "./item";
 

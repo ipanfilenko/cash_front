@@ -57,6 +57,19 @@
   font-size: 14px;
 }
 
-.static-content a.image-container:after {
-  background: none;
+.adsenseWrapper {
+  :global {
+    ins.adsbygoogle {
+      height: 0 !important;
+    }
+  
+    ins.adsbygoogle[data-ad-status="filled"] {
+      height: inherit !important;
+    }
+  
+    ins.adsbygoogle[data-ad-status="unfilled"] {
+      display: none !important;
+    }
+  }
 }
+
