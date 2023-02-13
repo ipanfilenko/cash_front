@@ -1,6 +1,9 @@
 ---
 title: "How to earn through Cashback"
-image: "/images/articles/cashback/thumbnail/4.jpg"
+author: "Roger Scott"
+authorIcon: "/images/about-us/staff-1.jpg.webp"
+createdAt: "12/23/2022"
+image: "/images/articles/cashback/4.jpg"
 description: "Cash back rewards are a popular way for Indian consumers to earn money on their everyday purchases. These rewards can be earned through a variety of different cash back services and apps, each with their own unique features and benefits."
 ---
 
@@ -19,6 +22,8 @@ Another popular cash back service in India is MagicPin. MagicPin is a cash back 
 | Many credit card companies give zero percent APR.      | Travel rewards do not get enabled for many credit cards.                 |
 | Cashbacks don’t get devalued by credit card companies. | Interest payment for credit card balance could hamper cashback earnings. |
 | Sign-up bonuses are there on every card.               | Annual Percentage Rate increases with default on credit cards.           |
+
+[![Google Play](/images/google-play.png)](https://play.google.com/store/apps/details?id=space.cashbro.browser&pli=1)
 
 Gopaisa is also a popular cash back app that allows you to earn cash back on your online purchases. To use Gopaisa, simply download the app, browse through available offers, and then click through to the retailer's website to make your purchase. Gopaisa will then add cash back rewards to your account.
 

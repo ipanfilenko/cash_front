@@ -1,6 +1,9 @@
 ---
 title: "2023 Cricket series Schedule"
-image: "/images/articles/cricket/thumbnail/5.jpg"
+author: "John Peters"
+authorIcon: "/images/about-us/staff-5.jpg"
+createdAt: "11/05/2022"
+image: "/images/articles/cricket/5.jpg"
 description: "The cricket schedule for India in 2023 includes several important series and tournaments that will feature some of the best teams from around the world."
 ---
 
@@ -17,14 +20,5 @@ The cricket schedule for India in 2023 includes several important series and tou
 3. **Mar-Jun 2023:** Indian Premier League (IPL) 2023 - The IPL is one of the most popular T20 leagues in the world and features some of the best players from around the globe. The league will take place across various venues in India and will feature 74 T20 matches. The IPL is known for its high-octane cricket, and this year's edition is expected to be no different.
 
 4. **Apr-May 2023:** India tour of Sri Lanka 2023 - The Indian team will travel to Sri Lanka to play 2 Test, 3 ODI, 3 T20 matches. This will be an opportunity for the Indian team to showcase their skills against a team that has traditionally been a strong competitor in the subcontinent. Sri Lanka is known for their spin-bowling attack, which will provide a great challenge for the Indian batsmen.
-
-| Pros Of Cashback                                       | Cons Of Cashback                                                         |
-| :----------------------------------------------------- | :----------------------------------------------------------------------- |
-| Every credit card has cashback associated with it.     | APR (Annual Percentage Rate) increases with time.                        |
-| Absence of annual fee related to the credit card.      | Sometimes foreign transaction charges get levied on the cashback cards.  |
-| The companies allow many shopping benefits.            | Many credit cards give cashback up to a predetermined limit.             |
-| Many credit card companies give zero percent APR.      | Travel rewards do not get enabled for many credit cards.                 |
-| Cashbacks don’t get devalued by credit card companies. | Interest payment for credit card balance could hamper cashback earnings. |
-| Sign-up bonuses are there on every card.               | Annual Percentage Rate increases with default on credit cards.           |
 
 All of these series are expected to be highly competitive, and will provide a great opportunity for the Indian team to showcase their skills against some of the best teams in the world. These events are also expected to attract a large number of cricket fans and enthusiasts from across the country and around the world, making them some of the most highly-anticipated events in the cricketing calendar.

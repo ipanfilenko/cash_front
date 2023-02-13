@@ -1,0 +1,11 @@
+.googlePlayLink {
+  max-width: 200px;
+  flex: 1;
+
+  .googlePlaySmall {
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    margin-left: -0.8rem;
+  }
+}

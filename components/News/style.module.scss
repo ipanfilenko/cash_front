@@ -2,11 +2,6 @@
 
 .news {
   padding-bottom: 25px;
-  :global {
-    ins.adsbygoogle[data-ad-status="unfilled"] {
-      display: none !important;
-    }
-  }
 }
 
 .list {
@@ -20,11 +15,6 @@
 .item {
   padding: 0 8px;
   width: 100%;
-  &:global {
-    &:has(.adsbygoogle[data-ad-status="unfilled"]) {
-      display: none;
-    }
-  }
 }
 
 .itemBox {

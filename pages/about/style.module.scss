@@ -1,8 +1,5 @@
 @import "styles/variables";
 
-.about {
-}
-
 .box {
   display: flex;
   align-items: center;
@@ -68,9 +65,18 @@
   }
 }
 
-.teamName {
-  font-size: 16px;
-  font-weight: 700;
-  line-height: 25px;
+.teamNameWrapper {
+  text-align: center;
   padding-left: 20px;
+
+  .teamName {
+    font-size: 0.9rem;
+    font-weight: 700;
+    line-height: 1.5;
+  }
+
+  .teamNamePosition {
+    font-size: 0.7rem;
+  }
 }
+

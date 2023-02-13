@@ -1,6 +1,9 @@
 ---
 title: "How to become the best cricket player"
-image: "/images/articles/cricket/thumbnail/6.jpg"
+author: "Harry Phelps"
+authorIcon: "/images/about-us/staff-2.jpg.webp"
+createdAt: "12/25/2022"
+image: "/images/articles/cricket/6.jpg"
 description: "To become the best cricketer in the world, and specifically in India, there are certain qualities that one must possess and work on consistently. In addition to the technical skills required to excel in the sport, certain mental and physical attributes are necessary to reach the top level of the game. "
 ---
 
@@ -11,14 +14,6 @@ description: "To become the best cricketer in the world, and specifically in Ind
 To become the best cricketer in the world, and specifically in India, there are certain qualities that one must possess and work on consistently. In addition to the technical skills required to excel in the sport, certain mental and physical attributes are necessary to reach the top level of the game.
 
 Firstly, having a strong work ethic is essential. The best cricketers in the world are known for their dedication to the sport and their willingness to put in the hard work to improve their skills. This includes regular practice, fitness training, and studying footage of their own performances as well as those of their opponents. A strong work ethic is essential to becoming the best cricketer in the world, as it is only through consistent hard work and perseverance that one can achieve the level of skill and mastery required to excel at the sport.
-
-| Pros Of Cashback                                   | Cons Of Cashback                                                        |
-| :------------------------------------------------- | :---------------------------------------------------------------------- |
-| Every credit card has cashback associated with it. | APR (Annual Percentage Rate) increases with time.                       |
-| Absence of annual fee related to the credit card.  | Sometimes foreign transaction charges get levied on the cashback cards. |
-| The companies allow many shopping benefits.        | Many credit cards give cashback up to a predetermined limit.            |
-| Many credit card companies give zero percent APR.  | Travel rewards do not get enabled for many credit cards.                |
-| Sign-up bonuses are there on every card.           | Annual Percentage Rate increases with default on credit cards.          |
 
 Secondly, mental toughness is crucial. Cricket is a sport that can be incredibly mentally demanding, and the best players in the world are able to maintain their focus and composure under pressure. This includes being able to deal with the pressure of high-stakes matches, as well as being able to bounce back from disappointment and setbacks. Mental toughness is essential to becoming the best cricketer in the world, as it allows one to perform at their best even when the stakes are high.
 

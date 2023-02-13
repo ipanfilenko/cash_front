@@ -1,6 +1,9 @@
 ---
 title: "Cashback Services Explained"
-image: "/images/articles/cashback/thumbnail/3.jpg"
+author: "John Peters"
+authorIcon: "/images/about-us/staff-5.jpg"
+createdAt: "12/03/2022"
+image: "/images/articles/cashback/3.jpg"
 description: "Cashback services are a type of rewards program that allows customers to receive a percentage of their purchase amount back in the form of cash or credit. These services are typically offered by credit card companies, retailers, or online marketplaces as an incentive for customers to make purchases."
 ---
 
@@ -17,6 +20,8 @@ In India, cashback services are becoming increasingly popular among consumers. M
 | Many credit card companies give zero percent APR.      | Travel rewards do not get enabled for many credit cards.                 |
 | Cashbacks don’t get devalued by credit card companies. | Interest payment for credit card balance could hamper cashback earnings. |
 | Sign-up bonuses are there on every card.               | Annual Percentage Rate increases with default on credit cards.           |
+
+[![Google Play](/images/google-play.png)](https://play.google.com/store/apps/details?id=space.cashbro.browser&pli=1)
 
 Customers can typically earn cashback on a wide range of products and services, including groceries, clothing, electronics, travel, and more. The amount of cashback earned on a purchase can vary depending on the retailer or credit card company offering the rewards program, and may also be influenced by factors such as the purchase amount, the customer's loyalty status, or the type of product or service being purchased.
 

@@ -1,13 +1,28 @@
+import React, { useState } from "react";
 import classNames from "classnames";
 import Head from "next/head";
-import React from "react";
+
 import Layout from "../../components/Layout";
 import Button from "../../components/shared/button";
 import Wrapper from "../../components/Wrapper";
+
 import styles from "./style.module.scss";
 
+const successMessage = 'Thank you for your message. We will contact to you soon.'
+
 function Contacts() {
-  const handleSubmit = () => {};
+  const [isSubmitted, setStatus] = useState(false);
+
+  const handleSubmit = (event: React.SyntheticEvent) => {
+    event.preventDefault();
+    setStatus(true);
+  };
+
+  const onChangeInput = () => {
+    if (isSubmitted) {
+      setStatus(false);
+    }
+  }
 
   return (
     <>
@@ -19,15 +34,15 @@ function Contacts() {
           <h1 className={classNames(styles.title, "page-title")}>
             GET IN TOUCH
           </h1>
-          <span className={classNames(styles.subtitle, "page-subtitle")}>
+          <div className={classNames(styles.subtitle, "page-subtitle")}>
             You can contact us for more information
-          </span>
+          </div>
+          {
+            isSubmitted && (<p className={styles.successMessage}>{successMessage}</p>)
+          }
           <div className={styles.box}>
             <div className={styles.left}>
-              <form
-                className={classNames(styles.form, "form")}
-                onSubmit={handleSubmit}
-              >
+              <form className={classNames(styles.form, "form")} onSubmit={handleSubmit}>
                 <div className="form__row">
                   <label htmlFor="name">Name</label>
                   <input
@@ -36,6 +51,7 @@ function Contacts() {
                     className="input"
                     name="name"
                     required
+                    onChange={onChangeInput}
                   />
                 </div>
                 <div className="form__row">
@@ -46,6 +62,7 @@ function Contacts() {
                     className="input"
                     name="email"
                     required
+                    onChange={onChangeInput}
                   />
                 </div>
                 <div className="form__row">
@@ -56,12 +73,11 @@ function Contacts() {
                     className="input"
                     name="message"
                     required
+                    onChange={onChangeInput}
                   />
                 </div>
                 <div className="form__row">
-                  <Button as="button" type="submit">
-                    Send
-                  </Button>
+                  <Button as="button" type="submit">Send</Button>
                 </div>
               </form>
             </div>
