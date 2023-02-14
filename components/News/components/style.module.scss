@@ -5,6 +5,10 @@
   align-items: center;
 }
 
+.actionMenuItem {
+  cursor: pointer;
+}
+
 .actionButton {
   padding: 0;
   border: 0;
@@ -12,6 +16,7 @@
   cursor: pointer;
   display: block;
   margin-left: 25px;
+
   svg {
     width: 24px;
     height: 24px;

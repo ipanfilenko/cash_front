@@ -7,6 +7,14 @@ class AndroidService {
     window.CashbroInterface?.loadUrlInNewTab(url);
   }
 
+  copyLinkAddress(url: string) {
+    window.CashbroInterface?.copyLinkAddress(url);
+  }
+
+  copyLinkText(url: string) {
+    window.CashbroInterface?.copyLinkText(url);
+  }
+
   share(title: string, url: string) {
     window.CashbroInterface?.share(title, url);
   }
