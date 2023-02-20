@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import dayjs from "dayjs";
 
 import articleService from "../../../services/articleService";
 
@@ -11,10 +12,14 @@ const useBlogState = ({ articles }: Props) => {
   const [currentCategory, setCurrentCategory] = useState<"all" | string>("all");
 
   useEffect(() => {
-    const filteredArticles = articles.filter((article) => {
-      if (currentCategory === "all") return true;
-      return article.category === currentCategory;
-    });
+    const filteredArticles = articles
+      .filter((article) => {
+        if (currentCategory === "all") { return true; }
+        
+        return article.category === currentCategory;
+      })
+      .sort((a, b) => (a.category >= b.category ? 1 : -1))
+
     setData(filteredArticles);
   }, [articles, currentCategory]);
 
