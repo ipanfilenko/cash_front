@@ -14,7 +14,15 @@ function Footer() {
           </div>
           <span className={styles.copyright}>© Copyright 2023</span>
         </div>
-        <span className={styles.site}>Octopus - CashBack Browser</span>
+        <div className={styles.box}>
+          <a 
+            className={styles.privacy}
+            href="https://sites.google.com/view/octopusbrowser"
+          >
+            Octopus Browser Privacy Policy
+          </a>
+        </div>
+        <div className={styles.site}>Octopus - CashBack Browser</div>
       </Wrapper>
     </div>
   );

@@ -8,6 +8,8 @@
   left: 0;
   right: 0;
   height: $footerHeight;
+  font-size: 0.8rem;
+
   @media (max-width: $portrait) {
     height: $mobileFooterHeight;
   }
@@ -24,6 +26,11 @@
 .box {
   display: flex;
   align-items: center;
+}
+
+.privacy {
+  text-decoration: none;
+  color: black;
 }
 
 .logo {
@@ -49,7 +56,7 @@
   .wrapper {
     display: block;
   }
-  .box {
+  .box, .site {
     padding-bottom: 15px;
     justify-content: center;
   }
