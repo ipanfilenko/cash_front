@@ -2,6 +2,8 @@ interface IAndroid {
   search(): void;
   openEarnings(): void;
   loadUrlInNewTab(url: string): void;
+  copyLinkAddress(url: string): void;
+  copyLinkText(url: string): void;
   share(title: string, url: string): void;
 }
 

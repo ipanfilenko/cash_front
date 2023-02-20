@@ -30,21 +30,26 @@ function useNewsState() {
     {
       label: "Open in new tab",
       value: ActionsEnum.OPEN_IN_NEW_TAB,
+      action: (news: NewsDto) => androidService.loadUrlInNewTab(news.website),
     },
     {
       label: "Copy link address",
       value: ActionsEnum.COPY_LINK_ADDRESS,
+      action: (news: NewsDto) => androidService.copyLinkAddress(news.visualUrl),
     },
     {
       label: "Copy link text",
       value: ActionsEnum.COPY_LINK_TEXT,
+      action: (news: NewsDto) => androidService.copyLinkText(news.websiteTitle),
     },
   ];
 
   const handleSelectAction = (news: NewsDto, action: ActionsEnum) => {
-    if (action === ActionsEnum.OPEN_IN_NEW_TAB) {
-      androidService.loadUrlInNewTab(news.website);
-    }
+    const selectedOption = dropdownOptions.find(option => option.value === action);
+
+    if (selectedOption) {
+      selectedOption.action(news);
+    } 
   };
 
   const handleOpenNews = (news: NewsDto) => {

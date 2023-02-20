@@ -41,10 +41,10 @@ function Action({
             {dropdownOptions.map((option) => (
               <React.Fragment key={option.value}>
                 {option.value === ActionsEnum.OPEN_IN_NEW_TAB ? (
-                  <MenuItem key={option.value}>{option.label}</MenuItem>
+                  <MenuItem key={option.value} className={styles.actionMenuItem}>{option.label}</MenuItem>
                 ) : (
-                  <CopyToClipboard text={news[clipboardMapper[option.value]]}>
-                    <MenuItem key={option.value}>{option.label}</MenuItem>
+                  <CopyToClipboard text={news[clipboardMapper[option.value]]} key={option.value}>
+                    <MenuItem key={option.value} className={styles.actionMenuItem}>{option.label}</MenuItem>
                   </CopyToClipboard>
                 )}
               </React.Fragment>
