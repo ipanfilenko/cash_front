@@ -1,5 +1,7 @@
 import React from "react";
 import Image from "next/image";
+import Link from "next/link";
+
 import Wrapper from "../../../Wrapper";
 
 import styles from "./style.module.scss";
@@ -15,12 +17,7 @@ function Footer() {
           <span className={styles.copyright}>© Copyright 2023</span>
         </div>
         <div className={styles.box}>
-          <a 
-            className={styles.privacy}
-            href="https://sites.google.com/view/octopusbrowser"
-          >
-            Octopus Browser Privacy Policy
-          </a>
+          <Link href="/policy" className={styles.privacy}>Octopus Browser Privacy Policy</Link>
         </div>
         <div className={styles.site}>Octopus - CashBack Browser</div>
       </Wrapper>

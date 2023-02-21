@@ -9,6 +9,7 @@ import {
   AccordionItemPanel,
 } from "react-accessible-accordion";
 import 'react-accessible-accordion/dist/fancy-example.css';
+
 import Layout from "../../components/Layout";
 import Wrapper from "../../components/Wrapper";
 import { faqQuestions } from "../../lib/faq";
@@ -18,7 +19,7 @@ function Faq() {
   return (
     <>
       <Head>
-        <title>Octopus CashBack Browser: Contacts</title>
+        <title>Octopus CashBack Browser: FAQ</title>
       </Head>
       <Layout>
         <Wrapper className={styles.faq}>
