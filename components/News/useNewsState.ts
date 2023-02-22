@@ -1,14 +1,6 @@
-import { useQuery } from "react-query";
 import { useRouter } from "next/router";
-import NewsDto from "./news.type";
+import NewsDto from "../../pages/start/news.type";
 import androidService from "../../services/androidService";
-
-const nodeEnv = process.env.NODE_ENV;
-
-const apiHost =
-  nodeEnv === "production"
-    ? process.env.NEXT_PUBLIC_API_HOST
-    : "http://localhost:3000";
 
 export enum ActionsEnum {
   OPEN_IN_NEW_TAB = "open-in-new-tab",
@@ -18,13 +10,6 @@ export enum ActionsEnum {
 
 function useNewsState() {
   const router = useRouter();
-  const { data, isLoading } = useQuery<NewsDto[]>("repoData", async () => {
-    const result = await fetch(`${apiHost}/api/news`).then(
-      async (response) => await response.json()
-    );
-
-    return result;
-  });
 
   const dropdownOptions = [
     {
@@ -61,8 +46,6 @@ function useNewsState() {
   };
 
   return {
-    newsList: data,
-    isLoading,
     dropdownOptions,
     handleSelectAction,
     handleOpenNews,
