@@ -8,7 +8,7 @@ import Articles, { IArticlesProps } from "../../components/Articles";
 import articleService from "../../services/articleService";
 import { setCacheForKey, getCacheForKey } from "../../services/cacheService";
 import Wrapper from "../../components/Wrapper";
-import NewsDto from "./news.type";
+import NewsDto from "../../components/News/news.type";
 
 import styles from "./style.module.scss";
 

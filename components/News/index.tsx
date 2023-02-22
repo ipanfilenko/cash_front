@@ -7,7 +7,7 @@ import dayjs from "dayjs";
 import relativeTime from "dayjs/plugin/relativeTime";
 
 import Action from "./components/Action";
-import NewsDto from "../../pages/start/news.type";
+import NewsDto from "./news.type";
 
 dayjs.extend(relativeTime);
 
