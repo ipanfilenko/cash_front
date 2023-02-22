@@ -7,21 +7,20 @@ import dayjs from "dayjs";
 import relativeTime from "dayjs/plugin/relativeTime";
 
 import Action from "./components/Action";
+import NewsDto from "../../pages/start/news.type";
 
 dayjs.extend(relativeTime);
 
 // news on /start page
-function News() {
+function News({ newsList }: { newsList: NewsDto[]}) {
   const {
-    isLoading,
-    newsList,
     dropdownOptions,
     handleSelectAction,
     handleOpenNews,
     handleShare,
   } = useNewsState();
 
-  if (isLoading || !newsList) {
+  if (!newsList) {
     return null;
   }
 
