@@ -6,12 +6,7 @@ import { IArticle, IFrontmatter } from "../components/Articles";
 const fileDir = "lib/articles/data";
 
 const sortArticles = (articles: IArticle[]) => {
-  const result = articles.sort((a, b) => {
-    const timeA = +dayjs(a.updatedTime);
-    const timeB = +dayjs(b.updatedTime);
-
-    return timeB - timeA;
-  });
+  const result = [...articles].sort((a, b) => (dayjs(a.frontmatter.createdAt).isAfter(dayjs(b.frontmatter.createdAt)) ? -1 : 1));
 
   return result;
 };

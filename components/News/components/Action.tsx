@@ -6,7 +6,7 @@ import { CopyToClipboard } from "react-copy-to-clipboard";
 import Icon from "../../shared/icons";
 import styles from "./style.module.scss";
 import { ActionsEnum } from "../useNewsState";
-import NewsDto from "../../../pages/start/news.type";
+import NewsDto from "../news.type";
 
 interface IActionProps {
   news: NewsDto;

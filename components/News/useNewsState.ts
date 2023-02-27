@@ -1,5 +1,5 @@
 import { useRouter } from "next/router";
-import NewsDto from "../../pages/start/news.type";
+import NewsDto from "./news.type";
 import androidService from "../../services/androidService";
 
 export enum ActionsEnum {

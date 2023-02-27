@@ -35,7 +35,7 @@ function Articles({ articles, title, className }: IArticlesProps) {
     infinite: true,
     speed: 500,
     slidesToShow: 3,
-    slidesToScroll: 5,
+    slidesToScroll: 1,
     variableWidth: true,
     centerPadding: "0",
     centerMode: true,
