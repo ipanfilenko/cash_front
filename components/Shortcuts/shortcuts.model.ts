@@ -13,6 +13,8 @@ const pathPrefix = "/images/shortcuts";
 class ShortcutModel {
   private readonly avalibleList = [
     ShortcutEnum.EARNINGS,
+    ShortcutEnum.GAME,
+    ShortcutEnum.QUIZ,
     ShortcutEnum.FLIPCART,
     ShortcutEnum.ALIEXPRESS,
     ShortcutEnum.MYNTRA,
@@ -34,6 +36,18 @@ class ShortcutModel {
       title: "Earnings",
       url: null,
       iconPath: `${pathPrefix}/money.svg`,
+    },
+    {
+      id: ShortcutEnum.GAME,
+      title: "Games",
+      url: "https://6325.play.gamezop.com/",
+      iconPath: `${pathPrefix}/game.gif`,
+    },
+    {
+      id: ShortcutEnum.QUIZ,
+      title: "Quiz",
+      url: "https://6326.play.quizzop.com/",
+      iconPath: `${pathPrefix}/quiz.gif`,
     },
     {
       id: ShortcutEnum.ADD_SHORTCUT,

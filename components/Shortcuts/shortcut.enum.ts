@@ -13,6 +13,8 @@ enum ShortcutEnum {
   YOUTUBE = 12,
   ALIEXPRESS = 13,
   MYNTRA = 14,
+  GAME = 15,
+  QUIZ = 16,
 }
 
 export default ShortcutEnum;
