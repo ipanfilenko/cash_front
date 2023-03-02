@@ -17,6 +17,12 @@ function Shortcuts() {
       androidService.openEarnings();
       return;
     }
+
+    if (shortcut.url && (shortcut.id === ShortcutEnum.GAME || shortcut.id === ShortcutEnum.QUIZ)) {
+      androidService.loadUrlOutsideBrowser(shortcut.url);
+      return;
+    }
+
     if (shortcut.url) {
       router.push(shortcut.url ?? "");
     }

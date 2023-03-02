@@ -1,6 +1,7 @@
 interface IAndroid {
   search(): void;
   openEarnings(): void;
+  loadUrlOutsideBrowser(url: string): void;
   loadUrlInNewTab(url: string): void;
   copyLinkAddress(url: string): void;
   copyLinkText(url: string): void;
