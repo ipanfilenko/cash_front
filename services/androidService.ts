@@ -7,6 +7,10 @@ class AndroidService {
     window.CashbroInterface?.loadUrlInNewTab(url);
   }
 
+  loadUrlOutsideBrowser(url: string) {
+    window.CashbroInterface?.loadUrlOutsideBrowser(url);
+  }
+
   copyLinkAddress(url: string) {
     window.CashbroInterface?.copyLinkAddress(url);
   }
