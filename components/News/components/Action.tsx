@@ -32,6 +32,7 @@ function Action({
       </button>
       <Dropdown
         trigger={["click"]}
+        placement="topLeft"
         overlay={
           <Menu
             onSelect={(option) =>
