@@ -32,6 +32,7 @@ function Home({ cashbackArticles }: { cashbackArticles: IArticlesProps["articles
           content="The revolutionary cashback browser Octopus changes the rules of the game - now you earn money just for surfing the web. Download the app and earn money."
         />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="facebook-domain-verification" content="06mdfrzb7xn68w4h33a0srjciy45ng" />
       </Head>
       <Layout>
         <Wrapper className={styles.wrapper}>
