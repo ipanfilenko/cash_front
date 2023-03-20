@@ -48,7 +48,7 @@ function News({ newsList }: { newsList: NewsDto[]}) {
                     onClick={() => handleOpenNews(news)}
                     role="button"
                   >
-                    <span className={styles.title}>{websiteTitle}</span>
+                    <span className={styles.title} dangerouslySetInnerHTML={{ __html: websiteTitle }} />
                     {mediaThumbnail && (
                       <Image
                         className={classNames(styles.image)}
