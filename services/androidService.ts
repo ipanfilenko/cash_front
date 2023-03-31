@@ -30,6 +30,10 @@ class AndroidService {
   isDevice() {
     return Boolean(window.CashbroInterface);
   }
+
+  detectAdBlock() {
+    window.CashbroInterface?.detectAdBlock();
+  }
 }
 
 export default new AndroidService();

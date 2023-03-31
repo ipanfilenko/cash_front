@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Image from "next/image";
 import useNewsState from "./useNewsState";
 import styles from "./style.module.scss";
@@ -8,6 +8,8 @@ import relativeTime from "dayjs/plugin/relativeTime";
 
 import Action from "./components/Action";
 import NewsDto from "./news.type";
+import { detectAdBlock } from "./detectAdBlock";
+import androidService from "../../services/androidService";
 
 dayjs.extend(relativeTime);
 
@@ -19,6 +21,18 @@ function News({ newsList }: { newsList: NewsDto[]}) {
     handleOpenNews,
     handleShare,
   } = useNewsState();
+
+  useEffect(() => {
+    const detect = async () => {
+      const hasAddBlock = await detectAdBlock();
+
+      if(hasAddBlock) {
+        androidService.detectAdBlock();
+      }
+    }
+
+    detect();
+  }, []);
 
   if (!newsList) {
     return null;
