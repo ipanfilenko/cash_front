@@ -56,20 +56,3 @@
   display: block;
   font-size: 14px;
 }
-
-.adsenseWrapper {
-  :global {
-    ins.adsbygoogle {
-      height: 0 !important;
-    }
-  
-    ins.adsbygoogle[data-ad-status="filled"] {
-      height: inherit !important;
-    }
-  
-    ins.adsbygoogle[data-ad-status="unfilled"] {
-      display: none !important;
-    }
-  }
-}
-
