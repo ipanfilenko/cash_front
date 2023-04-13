@@ -1,0 +1,30 @@
+@import "styles/variables";
+
+.block {
+  background: #FFFFFF;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.07);
+  border-radius: 10px;
+
+  .blockBorder {
+    height:10px;
+    width: 100%;
+    background: linear-gradient(90deg, #E72D66 3.48%, #F68E00 37.95%, #EBE995 67.61%, #FFEC00 100%), #000000;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+  }
+
+  .wrapper {
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem 1rem 2rem 1rem;
+    line-height: 2;
+    align-items: center;
+
+    .subText {
+      font-size: 0.8rem;
+      color: var(--textColor);
+      opacity: 0.5;
+    }
+  }
+}
+

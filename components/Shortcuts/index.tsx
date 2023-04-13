@@ -18,6 +18,11 @@ function Shortcuts() {
       return;
     }
 
+    if (shortcut.id === ShortcutEnum.VPN) {
+      androidService.onFreeVpnClick();
+      return;
+    }
+
     if (shortcut.url && (shortcut.id === ShortcutEnum.GAME || shortcut.id === ShortcutEnum.QUIZ)) {
       androidService.loadUrlOutsideBrowser(shortcut.url);
       return;

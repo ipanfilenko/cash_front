@@ -15,6 +15,7 @@ enum ShortcutEnum {
   MYNTRA = 14,
   GAME = 15,
   QUIZ = 16,
+  VPN = 17,
 }
 
 export default ShortcutEnum;

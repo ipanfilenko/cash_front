@@ -3,6 +3,7 @@ import { useQuery } from "react-query";
 
 import Search from "../../components/Search";
 import Shortcuts from "../../components/Shortcuts";
+import Vpn from "../../components/Vpn";
 import News from "../../components/News";
 import Articles, { IArticlesProps } from "../../components/Articles";
 import articleService from "../../services/articleService";
@@ -64,6 +65,7 @@ export default function Start({
       <Wrapper className={styles.wrapper}>
         <Search />
         <Shortcuts />
+        <Vpn />
         {
           newsList.length > 0 && (
             <>

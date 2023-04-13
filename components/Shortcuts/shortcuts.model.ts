@@ -13,6 +13,7 @@ const pathPrefix = "/images/shortcuts";
 class ShortcutModel {
   private readonly avalibleList = [
     ShortcutEnum.EARNINGS,
+    ShortcutEnum.VPN,
     ShortcutEnum.GAME,
     ShortcutEnum.QUIZ,
     ShortcutEnum.FLIPCART,
@@ -36,6 +37,12 @@ class ShortcutModel {
       title: "Earnings",
       url: null,
       iconPath: `${pathPrefix}/money.svg`,
+    },
+    {
+      id: ShortcutEnum.VPN,
+      title: "VPNtest",
+      url: null,
+      iconPath: `${pathPrefix}/vpn.png`,
     },
     {
       id: ShortcutEnum.GAME,

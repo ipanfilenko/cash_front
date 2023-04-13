@@ -3,6 +3,10 @@ class AndroidService {
     window.CashbroInterface?.openEarnings();
   }
 
+  onFreeVpnClick() {
+    window.CashbroInterface?.onFreeVpnClick();
+  }
+
   loadUrlInNewTab(url: string) {
     window.CashbroInterface?.loadUrlInNewTab(url);
   }
