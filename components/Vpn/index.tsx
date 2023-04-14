@@ -15,7 +15,7 @@ function Vpn() {
             <div className={styles.blockBorder}></div>
             <div className={styles.wrapper}>
                 <div>
-                    <div>VPNTest</div>
+                    <div>Free VPN</div>
                     <div className={styles.subText}>Tap here to turn ON safe surfing</div>
                 </div>    
                 <div>

@@ -40,9 +40,9 @@ class ShortcutModel {
     },
     {
       id: ShortcutEnum.VPN,
-      title: "VPNtest",
+      title: "Free VPN",
       url: null,
-      iconPath: `${pathPrefix}/vpn.png`,
+      iconPath: `${pathPrefix}/vpn.svg`,
     },
     {
       id: ShortcutEnum.GAME,
